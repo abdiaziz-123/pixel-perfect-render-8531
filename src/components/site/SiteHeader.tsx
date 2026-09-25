@@ -32,11 +32,12 @@ export function SiteHeader() {
           : "bg-transparent",
       )}
     >
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-6 px-5 lg:px-8">
+      <div className="mx-auto flex h-24 max-w-7xl items-center justify-between gap-6 px-5 lg:px-8">
         <a href="#home" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <span className="flex h-12 w-12 items-center justify-center rounded-md bg-white p-1 shadow-sm">
+          <span className="flex h-16 w-16 items-center justify-center rounded-lg bg-white p-1.5 shadow-md ring-1 ring-gold/30">
             <img src={logo.url} alt="SSH ONEWORLD GROUP" className="h-full w-full object-contain" />
           </span>
+
           <span className="hidden font-display text-sm font-extrabold uppercase leading-tight tracking-[0.14em] text-navy-foreground sm:block">
             SSH Oneworld
             <span className="block text-[0.65rem] font-semibold tracking-[0.3em] text-gold">
