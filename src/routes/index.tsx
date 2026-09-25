@@ -526,7 +526,7 @@ function Contact() {
             <li className="flex gap-4">
               <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
               <span className="text-sm text-navy">
-                Alamin Shopping Mall, Eastleigh, Nairobi, Kenya
+                Alamin Shopping Mall, 5th Floor, Office 510, Eastleigh, Nairobi, Kenya
               </span>
             </li>
             <li className="flex gap-4">
