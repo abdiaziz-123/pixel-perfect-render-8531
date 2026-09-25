@@ -193,8 +193,8 @@ function Hero() {
         height={1088}
         className="absolute inset-0 h-full w-full object-cover"
       />
-      <div className="absolute inset-0 bg-navy/85" />
-      <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-navy/40" />
+      <div className="absolute inset-0 bg-navy/60" />
+      <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/75 to-navy/15" />
       <div className="relative mx-auto flex min-h-[92vh] max-w-7xl flex-col justify-center px-5 pb-20 pt-32 lg:px-8">
         <div className="max-w-3xl reveal">
           <p className="eyebrow">Visa & International Mobility Consultancy</p>
