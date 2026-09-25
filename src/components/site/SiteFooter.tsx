@@ -6,7 +6,6 @@ const QUICK = [
   ["About", "#about"],
   ["Services", "#services"],
   ["Destinations", "#destinations"],
-  ["Work in Türkiye", "#turkiye"],
   ["FAQs", "#faq"],
   ["Contact", "#contact"],
 ];
@@ -18,7 +17,9 @@ export function SiteFooter() {
     <footer className="bg-navy text-navy-foreground">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 lg:grid-cols-4 lg:px-8 lg:py-20">
         <div>
-          <img src={logo.url} alt="SSH ONEWORLD GROUP" className="h-16 w-16 object-contain" />
+          <span className="flex h-16 w-16 items-center justify-center rounded-md bg-white p-1 shadow-sm">
+            <img src={logo.url} alt="SSH ONEWORLD GROUP" className="h-full w-full object-contain" />
+          </span>
           <p className="mt-5 font-display text-lg font-bold uppercase tracking-[0.12em]">
             SSH Oneworld Group
           </p>
