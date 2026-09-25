@@ -8,6 +8,7 @@ import {
   GraduationCap,
   HeartPulse,
   Globe2,
+  Mail,
   MapPin,
   MessageCircle,
   Phone,
@@ -532,6 +533,15 @@ function Contact() {
               <Phone className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
               <a href="tel:+254726962188" className="text-sm text-navy hover:text-gold">
                 +254 726 962 188
+              </a>
+            </li>
+            <li className="flex gap-4">
+              <Mail className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
+              <a
+                href="mailto:sshbusinessconsultant@gmail.com"
+                className="break-all text-sm text-navy hover:text-gold"
+              >
+                sshbusinessconsultant@gmail.com
               </a>
             </li>
           </ul>
