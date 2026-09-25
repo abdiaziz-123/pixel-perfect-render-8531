@@ -87,7 +87,7 @@ export function SiteFooter() {
           <ul className="mt-5 space-y-4 text-sm text-navy-foreground/75">
             <li className="flex gap-3">
               <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
-              Alamin Shopping Mall, Eastleigh, Nairobi, Kenya
+              Alamin Shopping Mall, 5th Floor, Office 510, Eastleigh, Nairobi, Kenya
             </li>
             <li className="flex gap-3">
               <Phone className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
