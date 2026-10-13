@@ -19,7 +19,7 @@ function AnimatedPage() {
       (entries) => {
         for (const entry of entries) {
           if (!entry.isIntersecting) continue;
-          entry.target.classList.add("is-revealed");
+          entry.target.setAttribute("data-revealed", "");
           observer.unobserve(entry.target);
         }
       },
@@ -43,7 +43,7 @@ function AnimatedPage() {
     for (const target of targets) {
       // Already-visible content never waits for scrolling or hydration.
       if (target.getBoundingClientRect().top < window.innerHeight - 24) continue;
-      target.classList.add("scroll-reveal");
+      target.setAttribute("data-reveal", "");
       observer.observe(target);
     }
     return () => observer.disconnect();
