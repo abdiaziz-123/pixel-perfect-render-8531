@@ -3,4 +3,4 @@
 - [x] Add cancer care, navigation, programmes, research, partnership and contact pages.
 - [x] Verify navigation, mobile layout, original logo and contact links.
 - [x] Apply required package security update.
-- [ ] Add and verify homepage entrances, page transitions and link motion with reduced-motion support.
+- [x] Add and verify homepage entrances, page transitions and link motion with reduced-motion support.
