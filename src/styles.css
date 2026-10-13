@@ -35,15 +35,16 @@
 }
 :root {
   --background: #ffffff;
-  --foreground: #193f43;
-  --primary: #155c58;
+  --foreground: #28495e;
+  --primary: #28495e;
   --on-primary: #ffffff;
-  --muted: #627270;
-  --surface: #f3f7f5;
-  --rose: #b64068;
-  --rose-soft: #faedf1;
-  --teal-soft: #e7f0eb;
-  --border: #dce6e2;
+  --muted: #5b6c78;
+  --surface: #f3f6f8;
+  --rose: #d24d76;
+  --rose-ink: #b5365e;
+  --rose-soft: #fbedf2;
+  --teal-soft: #eaf0f4;
+  --border: #dce4ea;
   --hero-wash: linear-gradient(
     90deg,
     rgba(255, 255, 255, 0.96) 0%,
@@ -92,7 +93,7 @@
   font-weight: 700;
   letter-spacing: 1.6px;
   text-transform: uppercase;
-  color: var(--rose);
+  color: var(--rose-ink);
 }
 .section-title {
   font-size: 36px;

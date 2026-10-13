@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { ArrowUpRight, Mail, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/ncco-logo.png.asset.json";
+import logo from "@/assets/ncco-logo.svg.asset.json";
 import { navigation } from "@/lib/ncco-content";
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -27,12 +27,12 @@ export function SiteHeader() {
           onClick={() => setOpen(false)}
           className="flex shrink-0 items-center gap-3"
         >
-          <span className="flex h-[76px] w-[76px] items-center justify-center rounded bg-primary p-1">
+          <span className="flex h-[76px] w-[76px] items-center justify-center bg-background">
             <img
               src={logo.url}
               alt="Northern Cancer Care Organization original logo"
-              width={457}
-              height={457}
+              width={682}
+              height={682}
               className="h-full w-full object-contain"
             />
           </span>

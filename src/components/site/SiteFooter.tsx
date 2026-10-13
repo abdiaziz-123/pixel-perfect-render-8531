@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight, Mail } from "lucide-react";
-import logo from "@/assets/ncco-logo.png.asset.json";
+import logo from "@/assets/ncco-logo.svg.asset.json";
 export function SiteFooter() {
   return (
     <footer className="bg-primary text-on-primary">
@@ -9,9 +9,9 @@ export function SiteFooter() {
           <img
             src={logo.url}
             alt="NCCO"
-            width={457}
-            height={457}
-            className="h-24 w-24 object-contain"
+            width={682}
+            height={682}
+            className="h-28 w-28 rounded-md bg-background p-2 object-contain"
           />
           <p className="mt-4 max-w-64 text-sm leading-6 text-on-primary/75">
             Connecting people. Advancing cancer care. Saving lives.
