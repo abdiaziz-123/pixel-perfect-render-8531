@@ -1,0 +1,41 @@
+import { useEffect, useRef } from "react";
+import { Outlet, useRouterState } from "@tanstack/react-router";
+
+/** One shared motion boundary keeps every public page consistent. */
+export function PageMotion() {
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
+  return <AnimatedPage key={pathname} />;
+}
+
+function AnimatedPage() {
+  const container = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const root = container.current;
+    if (!root || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (!("IntersectionObserver" in window)) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          entry.target.classList.add("is-revealed");
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.08, rootMargin: "0px 0px -24px 0px" },
+    );
+    const targets = root.querySelectorAll(
+      "main > section:not(:first-child) h2, main > section:not(:first-child) .grid > a, main > div section, main aside",
+    );
+    for (const target of targets) {
+      // Already-visible content never waits for scrolling or hydration.
+      if (target.getBoundingClientRect().top < window.innerHeight - 24) continue;
+      target.classList.add("scroll-reveal");
+      observer.observe(target);
+    }
+    return () => observer.disconnect();
+  }, []);
+
+  return <div ref={container} className="page-transition"><Outlet /></div>;
+}
