@@ -1,148 +1,149 @@
 @import "tailwindcss" source(none);
-@source "../src";
 @import "tw-animate-css";
-
+@source "../src";
 @custom-variant dark (&:is(.dark *));
-
-/*
- * SSH ONEWORLD GROUP design system.
- * Navy dominant, gold premium accent, white / light gray sections.
- */
-
 @theme inline {
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --radius-2xl: calc(var(--radius) + 8px);
-  --radius-3xl: calc(var(--radius) + 12px);
-  --radius-4xl: calc(var(--radius) + 16px);
-  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
+  --color-card: var(--background);
+  --color-card-foreground: var(--foreground);
+  --color-popover: var(--background);
+  --color-popover-foreground: var(--foreground);
   --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
+  --color-primary-foreground: var(--on-primary);
+  --color-secondary: var(--surface);
+  --color-secondary-foreground: var(--foreground);
+  --color-muted: var(--surface);
+  --color-muted-foreground: var(--muted);
+  --color-accent: var(--rose-soft);
+  --color-accent-foreground: var(--foreground);
   --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-ring-offset-background: var(--background);
-  --color-navy: var(--navy);
-  --color-navy-soft: var(--navy-soft);
-  --color-navy-foreground: var(--navy-foreground);
-  --color-gold: var(--gold);
-  --color-gold-soft: var(--gold-soft);
-  --color-gold-foreground: var(--gold-foreground);
+  --color-input: var(--border);
+  --color-ring: var(--primary);
   --color-surface: var(--surface);
-  --shadow-elevate: var(--shadow-elevate);
-  --shadow-card: var(--shadow-card);
+  --color-rose: var(--rose);
+  --color-rose-soft: var(--rose-soft);
+  --color-teal-soft: var(--teal-soft);
+  --color-on-primary: var(--on-primary);
+  --color-destructive: var(--rose);
+  --color-destructive-foreground: var(--on-primary);
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
 }
-
 :root {
-  --radius: 0.5rem;
-
-  /* Brand */
-  --navy: oklch(0.243 0.052 261.5); /* #0B1F3A */
-  --navy-soft: oklch(0.34 0.062 258); /* #17365D */
-  --navy-foreground: oklch(1 0 0);
-  --gold: oklch(0.733 0.123 87); /* #C9A227 */
-  --gold-soft: oklch(0.85 0.09 88);
-  --gold-foreground: oklch(0.243 0.052 261.5);
-  --surface: oklch(0.971 0.002 260); /* #F4F5F7 */
-
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.243 0.052 261.5);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.243 0.052 261.5);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.243 0.052 261.5);
-  --primary: oklch(0.243 0.052 261.5);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.971 0.002 260);
-  --secondary-foreground: oklch(0.243 0.052 261.5);
-  --muted: oklch(0.971 0.002 260);
-  --muted-foreground: oklch(0.52 0.02 260);
-  --accent: oklch(0.733 0.123 87);
-  --accent-foreground: oklch(0.243 0.052 261.5);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.915 0.006 260);
-  --input: oklch(0.915 0.006 260);
-  --ring: oklch(0.733 0.123 87);
-
-  --shadow-card: 0 1px 2px oklch(0.243 0.052 261.5 / 0.06), 0 12px 32px -18px oklch(0.243 0.052 261.5 / 0.35);
-  --shadow-elevate: 0 24px 60px -28px oklch(0.243 0.052 261.5 / 0.55);
+  --background: #ffffff;
+  --foreground: #193f43;
+  --primary: #155c58;
+  --on-primary: #ffffff;
+  --muted: #627270;
+  --surface: #f3f7f5;
+  --rose: #b64068;
+  --rose-soft: #faedf1;
+  --teal-soft: #e7f0eb;
+  --border: #dce6e2;
+  --hero-wash: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(255, 255, 255, 0.88) 28%,
+    rgba(255, 255, 255, 0.45) 46%,
+    rgba(255, 255, 255, 0) 65%
+  );
 }
-
 @layer base {
   * {
-    border-color: var(--color-border);
+    border-color: var(--border);
   }
-
   body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+    margin: 0;
+    background: var(--background);
+    color: var(--foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
   }
-
   h1,
   h2,
   h3,
   h4 {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
   }
-
+  a,
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 5.5rem;
   }
 }
-
-@utility eyebrow {
-  font-family: var(--font-display);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.22em;
+.site-container {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 40px;
+}
+.hero-wash {
+  background: var(--hero-wash);
+}
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--rose);
 }
-
-@utility rule-gold {
-  &::after {
-    content: "";
-    display: block;
-    width: 3.5rem;
-    height: 2px;
-    margin-top: 1.25rem;
-    background: var(--color-gold);
-  }
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.25;
 }
-
-@utility reveal {
-  animation: reveal-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+.nav-link {
+  font-size: 13px;
+  font-weight: 500;
+  transition: color 0.2s;
 }
-
-@keyframes reveal-up {
+.nav-link:hover {
+  color: var(--rose);
+}
+.entry {
+  animation: enter 0.7s ease both;
+}
+@keyframes enter {
   from {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
     transform: none;
+  }
+}
+@media (max-width: 767px) {
+  .site-container {
+    padding-inline: 22px;
+  }
+  .section-title {
+    font-size: 28px;
+  }
+  .hero-wash {
+    background: linear-gradient(
+      90deg,
+      var(--background) 0%,
+      rgba(255, 255, 255, 0.92) 45%,
+      rgba(255, 255, 255, 0.3) 100%
+    );
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .entry {
+    animation: none;
+  }
+  * {
+    transition: none !important;
   }
 }

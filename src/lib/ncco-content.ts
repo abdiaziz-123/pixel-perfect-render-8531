@@ -1,0 +1,278 @@
+export const navigation = [
+  { label: "About NCCO", to: "/about" },
+  { label: "Cancer care", to: "/cancer-care" },
+  { label: "Programmes", to: "/programmes" },
+  { label: "Research & data", to: "/research" },
+  { label: "Get involved", to: "/get-involved" },
+] as const;
+export type PageContent = {
+  title: string;
+  eyebrow: string;
+  intro: string;
+  sections: { title: string; text: string }[];
+  note?: string;
+  action?: string;
+  subject?: string;
+};
+export const pages = {
+  about: {
+    title: "People at the heart of cancer care.",
+    eyebrow: "About NCCO",
+    intro:
+      "Northern Cancer Care Organization brings together patient navigation, community programmes and evidence to advance access to cancer care.",
+    sections: [
+      {
+        title: "Our purpose",
+        text: "Connecting People. Advancing Cancer Care. Saving Lives. The NCCO framework puts patients, families, healthcare providers and specialists at the centre of a more connected cancer-care ecosystem.",
+      },
+      {
+        title: "Our direction",
+        text: "Our priorities are accessible cancer information, navigation and referral coordination, community awareness, and research that helps identify gaps in care.",
+      },
+      {
+        title: "Our approach",
+        text: "Compassion, collaboration and responsible use of information guide the proposed NCCO ecosystem. Patient privacy and appropriate consent belong at the heart of every service.",
+      },
+    ],
+    note: "Leadership, board membership, organisational history and formal mission and vision statements will be added once confirmed by NCCO.",
+    action: "Connect with NCCO",
+    subject: "About NCCO",
+  },
+  "cancer-care": {
+    title: "Understanding cancer. Finding your next step.",
+    eyebrow: "Cancer care & information",
+    intro:
+      "Clear information can help you ask questions, understand your options and take the next step with a qualified healthcare professional.",
+    sections: [
+      {
+        title: "Prevention & awareness",
+        text: "Learn about cancer risk factors and speak with a healthcare professional about prevention appropriate to your circumstances. Awareness supports informed choices and reduces stigma.",
+      },
+      {
+        title: "Screening & early detection",
+        text: "Screening recommendations depend on age, health history and cancer type. Ask a qualified clinician which screening services are appropriate for you. Seek medical advice about new or persistent symptoms.",
+      },
+      {
+        title: "Treatment information",
+        text: "Cancer care is individual. Your clinical team can explain your diagnosis, available treatments, expected benefits and possible side effects. NCCO navigation is not a substitute for clinical assessment.",
+      },
+      {
+        title: "Survivorship",
+        text: "After treatment, discuss follow-up, recovery, emotional wellbeing and ongoing support with your care team. Survivorship needs may change over time.",
+      },
+      {
+        title: "Palliative & supportive care",
+        text: "Supportive and palliative care focus on quality of life, symptom relief and the needs of patients and families. Ask your treating team about available services.",
+      },
+    ],
+    note: "Educational information only. This website does not provide medical advice, diagnosis or treatment. For urgent concerns, contact a healthcare facility or your local emergency service.",
+    action: "Ask about care navigation",
+    subject: "Cancer care navigation enquiry",
+  },
+  "patient-navigation": {
+    title: "A more connected path to care.",
+    eyebrow: "Patient navigation",
+    intro:
+      "Finding the right cancer service can feel overwhelming. The NCCO navigation framework is designed to connect people with appropriate services and referral support.",
+    sections: [
+      {
+        title: "01 · Understand your needs",
+        text: "Start with a general enquiry about navigation. Availability and next steps must be confirmed with NCCO. Do not send diagnoses, medical records or other sensitive health information through ordinary email.",
+      },
+      {
+        title: "02 · Identify appropriate services",
+        text: "The proposed navigation process identifies suitable cancer services and specialist connections based on individual needs and service availability.",
+      },
+      {
+        title: "03 · Coordinate referrals",
+        text: "Referral assistance is intended to help patients understand where to go and how to connect with the appropriate healthcare provider. Clinical decisions remain with qualified professionals.",
+      },
+      {
+        title: "04 · Follow up with care",
+        text: "The framework includes follow-up and recording outcomes with appropriate consent, privacy safeguards and authorised access.",
+      },
+    ],
+    note: "A verified service directory and secure online navigation requests are planned. This public website does not collect patient records or operate a referral portal.",
+    action: "Enquire about navigation",
+    subject: "Patient navigation — general enquiry",
+  },
+  programmes: {
+    title: "Care starts in the community.",
+    eyebrow: "Our programme priorities",
+    intro:
+      "The NCCO framework identifies four connected priorities: community engagement, screening, awareness and patient support.",
+    sections: [
+      {
+        title: "Community programmes",
+        text: "Building local awareness and helping communities understand cancer-care pathways are central to the proposed programme approach.",
+      },
+      {
+        title: "Screening programmes",
+        text: "The framework prioritises screening access and appropriate referral pathways. Confirm current screening availability directly with NCCO or a qualified healthcare provider.",
+      },
+      {
+        title: "Awareness campaigns",
+        text: "Cancer information and community engagement can support earlier help-seeking, informed conversations and reduced stigma.",
+      },
+      {
+        title: "Patient support",
+        text: "Navigation, referral coordination and connections to support services are intended to help patients and families through their care journey.",
+      },
+    ],
+    note: "Dates, locations and enrolment details have not yet been supplied. Contact NCCO to confirm any available activities.",
+    action: "Ask about programmes",
+    subject: "Programme availability enquiry",
+  },
+  research: {
+    title: "Better evidence. Better cancer care.",
+    eyebrow: "Research & data",
+    intro:
+      "NCCO’s proposed research and data ecosystem aims to turn responsible evidence into a better understanding of cancer-care access and service gaps.",
+    sections: [
+      {
+        title: "Research collaboration",
+        text: "The framework sets out a research pathway from a question and proposal through ethics approval, data collection, analysis and publication.",
+      },
+      {
+        title: "Cancer Data Hub",
+        text: "The proposed hub would bring together approved information on service availability, screening access, referral patterns, geographic gaps and programme outcomes.",
+      },
+      {
+        title: "Monitoring & evaluation",
+        text: "Programme indicators are intended to connect inputs and activities to outputs, outcomes and impact, supporting accountability and informed decisions.",
+      },
+      {
+        title: "Reports & publications",
+        text: "Verified publications, approved datasets and cancer reports will be listed when available. No public research datasets or published NCCO reports have been provided yet.",
+      },
+    ],
+    note: "The Data Observatory and dashboards are planned. Patient information must not be published or shared without appropriate authorisation and safeguards.",
+    action: "Discuss research collaboration",
+    subject: "Research collaboration enquiry",
+  },
+  partners: {
+    title: "Progress through partnership.",
+    eyebrow: "Partners & collaboration",
+    intro:
+      "Connected cancer care takes collaboration across healthcare, research, community organisations and public institutions.",
+    sections: [
+      {
+        title: "Hospitals & healthcare providers",
+        text: "The NCCO framework invites collaboration around service information, patient navigation and appropriate referral pathways.",
+      },
+      {
+        title: "Universities & researchers",
+        text: "Research partnerships can help develop ethical studies, strengthen evidence and understand unmet cancer-care needs.",
+      },
+      {
+        title: "Community & international partners",
+        text: "NGOs, government institutions and international organisations are part of the proposed collaboration ecosystem.",
+      },
+    ],
+    note: "Confirmed partners have not yet been supplied. No institutional affiliation or endorsement is implied.",
+    action: "Start a partnership conversation",
+    subject: "Partnership enquiry",
+  },
+  "get-involved": {
+    title: "Be part of a more caring future.",
+    eyebrow: "Get involved",
+    intro:
+      "Bring your time, expertise or support to a shared ambition: connecting people with better cancer care.",
+    sections: [
+      {
+        title: "Volunteer",
+        text: "Express your interest in supporting community awareness, organisational work or patient-support activities. Roles and availability must be confirmed with NCCO.",
+      },
+      {
+        title: "Partner with us",
+        text: "Explore collaboration as a healthcare provider, community organisation, institution or supporter.",
+      },
+      {
+        title: "Support NCCO",
+        text: "Contact NCCO for verified donation arrangements. Online donations and payment details are not yet available on this website.",
+      },
+      {
+        title: "Collaborate on research",
+        text: "Discuss research questions, approved evidence and opportunities for responsible collaboration.",
+      },
+    ],
+    action: "Express your interest",
+    subject: "Get involved with NCCO",
+  },
+  cancerconnect: {
+    title: "Connecting the cancer-care community.",
+    eyebrow: "CancerConnect · Planned",
+    intro:
+      "CancerConnect is NCCO’s proposed digital platform for connecting patients, healthcare providers and specialists.",
+    sections: [
+      {
+        title: "For patients",
+        text: "Planned capabilities include navigation assistance, service information, referral updates and educational resources.",
+      },
+      {
+        title: "For providers",
+        text: "The proposed provider experience supports appropriate referrals and access to cancer-service information.",
+      },
+      {
+        title: "For specialists",
+        text: "The proposed network would help specialists share expertise and participate in coordinated referrals.",
+      },
+      {
+        title: "Privacy by design",
+        text: "CancerConnect must be developed with qualified software, health-informatics and data-protection expertise, consent procedures and appropriate access controls.",
+      },
+    ],
+    note: "CancerConnect is not live. There is no patient login, online referral tracking or secure messaging on this public website. It is not intended to replace hospital medical records.",
+    action: "Ask about CancerConnect",
+    subject: "CancerConnect enquiry",
+  },
+  contact: {
+    title: "Let’s connect.",
+    eyebrow: "Contact NCCO",
+    intro:
+      "For general enquiries, programme information, partnerships or research conversations, contact Northern Cancer Care Organization.",
+    sections: [
+      { title: "General enquiries", text: "info@northerncancercare.org" },
+      {
+        title: "Your privacy matters",
+        text: "Keep your first enquiry general. Do not include medical records, diagnoses, identification documents or other sensitive personal information in ordinary email.",
+      },
+    ],
+    note: "NCCO’s telephone number, WhatsApp account and office address have not been supplied. The listed email comes from the organisation’s digital-infrastructure document; mailbox availability still needs confirmation.",
+    action: "Email NCCO",
+    subject: "General enquiry",
+  },
+  privacy: {
+    title: "Respect for every person’s privacy.",
+    eyebrow: "Privacy & patient information",
+    intro:
+      "This public website provides information and links to email. It does not operate a patient portal or collect medical records.",
+    sections: [
+      {
+        title: "Contacting NCCO",
+        text: "Email links open your email application. Any information you choose to send is handled by your email provider and the recipient. Avoid sending sensitive health or identity information through ordinary email.",
+      },
+      {
+        title: "Future patient services",
+        text: "Before patient-data services launch, NCCO’s framework calls for consent procedures, data retention and access policies, breach response, confidentiality agreements and research-data governance.",
+      },
+      {
+        title: "Formal policies",
+        text: "A final organisation-approved privacy policy and relevant data-protection procedures are required before secure patient workflows become available.",
+      },
+    ],
+    note: "This notice is not a claim of regulatory certification. NCCO’s framework recognises Kenya’s Data Protection Act, 2019.",
+  },
+} satisfies Record<string, PageContent>;
+export function pageHead(title: string, description: string) {
+  return {
+    meta: [
+      { title: `${title} | NCCO` },
+      { name: "description", content: description },
+      { property: "og:title", content: `${title} | Northern Cancer Care Organization` },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  };
+}
