@@ -1,102 +1,13 @@
-import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
-import logo from "@/assets/ssh-logo.png.asset.json";
-import { cn } from "@/lib/utils";
-
-const NAV = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Destinations", href: "#destinations" },
-  { label: "FAQs", href: "#faq" },
-  { label: "Contact", href: "#contact" },
-];
-
-export function SiteHeader() {
-  const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  return (
-    <header
-      className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
-        scrolled || open
-          ? "bg-navy/95 backdrop-blur border-b border-gold/20"
-          : "bg-transparent",
-      )}
-    >
-      <div className="mx-auto flex h-24 max-w-7xl items-center justify-between gap-6 px-5 lg:px-8">
-        <a href="#home" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <span className="flex h-16 w-16 items-center justify-center rounded-lg bg-white p-1.5 shadow-md ring-1 ring-gold/30">
-            <img src={logo.url} alt="SSH ONEWORLD GROUP" className="h-full w-full object-contain" />
-          </span>
-
-          <span className="hidden font-display text-sm font-extrabold uppercase leading-tight tracking-[0.14em] text-navy-foreground sm:block">
-            SSH Oneworld
-            <span className="block text-[0.65rem] font-semibold tracking-[0.3em] text-gold">
-              Group
-            </span>
-          </span>
-        </a>
-
-        <nav className="hidden items-center gap-7 xl:flex">
-          {NAV.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="text-sm font-medium text-navy-foreground/80 transition-colors hover:text-gold"
-            >
-              {item.label}
-            </a>
-          ))}
-        </nav>
-
-        <div className="flex items-center gap-3">
-          <a
-            href="#contact"
-            className="hidden rounded-md bg-gold px-5 py-3 text-sm font-semibold text-gold-foreground transition-colors hover:bg-gold-soft sm:inline-flex"
-          >
-            Start Application
-          </a>
-          <button
-            type="button"
-            aria-label={open ? "Close menu" : "Open menu"}
-            onClick={() => setOpen((v) => !v)}
-            className="inline-flex h-12 w-12 items-center justify-center rounded-md border border-gold/30 text-navy-foreground xl:hidden"
-          >
-            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
-        </div>
-      </div>
-
-      {open && (
-        <nav className="border-t border-gold/15 bg-navy px-5 pb-6 pt-2 xl:hidden">
-          {NAV.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              onClick={() => setOpen(false)}
-              className="block border-b border-navy-foreground/10 py-4 text-base font-medium text-navy-foreground/90"
-            >
-              {item.label}
-            </a>
-          ))}
-          <a
-            href="#contact"
-            onClick={() => setOpen(false)}
-            className="mt-5 block rounded-md bg-gold px-5 py-4 text-center text-base font-semibold text-gold-foreground"
-          >
-            Start Application
-          </a>
-        </nav>
-      )}
-    </header>
-  );
-}
+import { Link } from '@tanstack/react-router';
+import { useState } from 'react';
+import { ArrowUpRight, Mail, Menu, X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import logo from '@/assets/ncco-logo.png.asset.json';
+import { navigation } from '@/lib/ncco-content';
+export function SiteHeader(){const [open,setOpen]=useState(false);return <header className="relative z-30 bg-background">
+ <div className="bg-primary text-on-primary"><div className="site-container flex min-h-9 items-center justify-between gap-4 py-2 text-[11px]"><span>Connecting People. Advancing Cancer Care. Saving Lives.</span><a className="hidden items-center gap-2 sm:flex" href="mailto:info@northerncancercare.org"><Mail size={12}/>info@northerncancercare.org</a></div></div>
+ <div className="site-container flex h-24 items-center justify-between gap-5"><Link to="/" aria-label="NCCO home" onClick={()=>setOpen(false)} className="flex shrink-0 items-center gap-3"><span className="flex h-[76px] w-[76px] items-center justify-center rounded bg-primary p-1"><img src={logo.url} alt="Northern Cancer Care Organization original logo" width={457} height={457} className="h-full w-full object-contain"/></span><span className="text-[11px] font-bold uppercase leading-[1.5]">Northern<br/>Cancer Care<br/><span className="font-normal">Organization</span></span></Link>
+ <nav aria-label="Main navigation" className="hidden items-center gap-7 xl:flex">{navigation.map(n=><Link key={n.to} to={n.to} className="nav-link" activeProps={{className:'nav-link text-rose'}}>{n.label}</Link>)}</nav>
+ <div className="flex items-center gap-3"><Button asChild className="hidden h-11 px-5 text-xs sm:inline-flex"><Link to="/patient-navigation">Find support <ArrowUpRight/></Link></Button><Button variant="ghost" size="icon" className="xl:hidden" aria-label={open?'Close menu':'Open menu'} aria-expanded={open} onClick={()=>setOpen(!open)}>{open?<X/>:<Menu/>}</Button></div></div>
+ {open&&<nav aria-label="Mobile navigation" className="site-container border-t pb-5 xl:hidden">{[...navigation,{label:'Find support',to:'/patient-navigation' as const},{label:'Contact',to:'/contact' as const}].map(n=><Link key={n.to} to={n.to} onClick={()=>setOpen(false)} className="block border-b py-4 text-sm">{n.label}</Link>)}</nav>}
+ </header>}
