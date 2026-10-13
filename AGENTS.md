@@ -13,3 +13,4 @@
 - Keep NCCO public content in a shared data module with distinct TanStack leaf routes and shared site layout, so navigation and page metadata remain consistent.
 - Keep this phase a public informational website; future CancerConnect capabilities must be marked planned rather than simulated as working patient services.
 - Public contact actions open email drafts without collecting or storing health information; secure patient workflows require a separate reviewed implementation.
+- Keep page entrances and scroll reveals in the shared PageMotion boundary with CSS motion rules; honor reduced-motion preferences so all leaf pages behave consistently without changing navigation.

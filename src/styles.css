@@ -108,8 +108,60 @@
 .nav-link:hover {
   color: var(--rose);
 }
-.entry {
-  animation: enter 0.7s ease both;
+.page-transition {
+  animation: page-enter 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.entry > * {
+  animation: enter 750ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.entry > :nth-child(2) { animation-delay: 80ms; }
+.entry > :nth-child(3) { animation-delay: 160ms; }
+.entry > :nth-child(4) { animation-delay: 240ms; }
+.entry > :nth-child(5) { animation-delay: 320ms; }
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 650ms ease, transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.scroll-reveal.is-revealed {
+  opacity: 1;
+  transform: none;
+}
+header nav a {
+  position: relative;
+}
+header nav a::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: -5px;
+  height: 2px;
+  background: var(--rose);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+}
+header nav a:hover::after,
+header nav a:focus-visible::after,
+header nav a[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+main a[data-slot="button"] {
+  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
+}
+main a[data-slot="button"]:hover { transform: translateY(-2px); }
+main a[data-slot="button"]:active { transform: translateY(0); }
+main a.group > svg:last-child,
+main a.group span > svg:last-child {
+  transition: transform 220ms ease;
+}
+main a.group:hover > svg:last-child,
+main a.group:hover span > svg:last-child {
+  transform: translateX(3px);
+}
+@keyframes page-enter {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
 }
 @keyframes enter {
   from {
@@ -141,9 +193,9 @@
   html {
     scroll-behavior: auto;
   }
-  .entry {
-    animation: none;
-  }
+  .page-transition,
+  .entry > * { animation: none; }
+  .scroll-reveal { opacity: 1; transform: none; }
   * {
     transition: none !important;
   }
