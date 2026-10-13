@@ -25,9 +25,21 @@ function AnimatedPage() {
       },
       { threshold: 0.08, rootMargin: "0px 0px -24px 0px" },
     );
-    const targets = root.querySelectorAll(
-      "main > section:not(:first-child) h2, main > section:not(:first-child) .grid > a, main > div section, main aside",
-    );
+    const targets = [
+      ...root.querySelectorAll(
+        [
+          "main > section:not(:first-child) h2",
+          "main > section:not(:first-child) h2 ~ p",
+          "main > section:not(:first-child) .grid > a",
+          "main > section:not(:first-child) .grid > div",
+          "main > section:not(:first-child) img",
+          "main > section:not(:first-child) ul",
+          "main > div section",
+          "main aside",
+        ].join(", "),
+      ),
+      ...document.querySelectorAll("footer"),
+    ];
     for (const target of targets) {
       // Already-visible content never waits for scrolling or hydration.
       if (target.getBoundingClientRect().top < window.innerHeight - 24) continue;

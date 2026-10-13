@@ -146,18 +146,52 @@ header nav a:focus-visible::after,
 header nav a[aria-current="page"]::after {
   transform: scaleX(1);
 }
-main a.inline-flex {
-  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
+a.inline-flex,
+button.inline-flex {
+  transition: transform 220ms ease, background-color 220ms ease, color 220ms ease,
+    border-color 220ms ease, box-shadow 220ms ease;
 }
 main a.inline-flex:hover { transform: translateY(-2px); }
 main a.inline-flex:active { transform: translateY(0); }
+a.inline-flex > svg:last-child,
 main a.group > svg:last-child,
 main a.group span > svg:last-child {
-  transition: transform 220ms ease;
+  transition: transform 240ms ease, color 240ms ease;
 }
+a.inline-flex:hover > svg:last-child,
 main a.group:hover > svg:last-child,
 main a.group:hover span > svg:last-child {
   transform: translateX(3px);
+}
+main a.group span:has(> svg) {
+  transition: color 220ms ease, background-color 220ms ease;
+}
+main a.group.rounded-md {
+  transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
+}
+main a.group.rounded-md:hover {
+  box-shadow: 0 14px 30px -18px rgba(40, 73, 94, 0.35);
+  border-color: rgba(210, 77, 118, 0.35);
+}
+main a.group.rounded-md > svg:first-child {
+  transition: transform 260ms ease;
+}
+main a.group.rounded-md:hover > svg:first-child {
+  transform: translateY(-2px);
+}
+main a.group:hover > span:first-child {
+  background-color: var(--rose);
+  color: var(--on-primary);
+}
+nav[aria-label="Mobile navigation"] {
+  animation: menu-in 240ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes menu-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: none; }
+}
+main img {
+  animation: img-fade 700ms ease both;
 }
 @keyframes page-enter {
   from { opacity: 0; transform: translateY(8px); }
@@ -199,4 +233,12 @@ main a.group:hover span > svg:last-child {
   * {
     transition: none !important;
   }
+}
+@keyframes img-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  main img,
+  nav[aria-label="Mobile navigation"] { animation: none; }
 }
