@@ -1,18 +1,319 @@
-import { createFileRoute, Link } from '@tanstack/react-router';
-import { ArrowRight, ArrowUpRight, Heart, HeartHandshake, BookOpen, Users, ShieldCheck, Activity, Microscope, Sprout } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { pageHead } from '@/lib/ncco-content';
-import hero from '@/assets/ncco-care.jpg';
-export const Route = createFileRoute('/')({head:()=>pageHead('Northern Cancer Care Organization','Connecting people, advancing cancer care and saving lives. Explore NCCO’s cancer information, patient navigation, community programmes and research priorities.'),component:Home});
-const pathways=[{icon:HeartHandshake,label:'Patients & families',text:'Information and guidance for your care journey.',cta:'Find care & support',to:'/patient-navigation'},{icon:Activity,label:'Healthcare professionals',text:'Connect expertise with the people who need it.',cta:'Explore collaboration',to:'/partners'},{icon:Heart,label:'Supporters & partners',text:'Help build a more connected future for cancer care.',cta:'Make a difference',to:'/get-involved'}] as const;
-const focus=[{icon:Sprout,title:'Prevention & awareness',text:'Building understanding. Encouraging informed choices.',to:'/cancer-care'},{icon:HeartHandshake,title:'Patient navigation',text:'Connecting people with appropriate care and support.',to:'/patient-navigation'},{icon:Users,title:'Community programmes',text:'Bringing awareness and care closer to communities.',to:'/programmes'},{icon:Microscope,title:'Research & evidence',text:'Understanding gaps. Informing better cancer care.',to:'/research'}] as const;
-function Home(){return <main>
- <section className="relative isolate overflow-hidden"><img src={hero} alt="Illustration of a compassionate conversation between a Kenyan healthcare professional and a patient" width={1920} height={1024} fetchPriority="high" className="absolute inset-0 -z-20 h-full w-full object-cover object-[65%_center]"/><div className="hero-wash absolute inset-0 -z-10"/><div className="site-container flex min-h-[560px] items-center py-14 md:min-h-[600px]"><div className="entry max-w-[590px]"><p className="eyebrow flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-rose"/>Together, for better cancer care</p><h1 className="mt-6 text-[40px] font-bold leading-[1.14] md:text-[54px]">Northern Cancer<br/>Care Organization<span className="mt-3 block text-rose">Care. Connection. Hope.</span></h1><p className="mt-6 max-w-[420px] text-base leading-7 text-muted-foreground">Connecting people to information, support and a more connected path through cancer care.</p><div className="mt-8 flex flex-wrap gap-3"><Button asChild className="h-12 px-6"><Link to="/patient-navigation">Find care & support <ArrowUpRight/></Link></Button><Button asChild variant="outline" className="h-12 border-primary/30 bg-background/70 px-6"><Link to="/about">Discover NCCO <ArrowRight/></Link></Button></div><div className="mt-8 flex items-center gap-2 text-xs text-foreground/80"><ShieldCheck size={16} className="text-primary"/>Patient-centred. Community-focused. Evidence-informed.</div></div></div></section>
- <section aria-label="Find your pathway" className="border-y bg-background"><div className="site-container grid md:grid-cols-3">{pathways.map(({icon:Icon,label,text,cta,to})=><Link to={to} key={label} className="group flex gap-5 border-b py-8 last:border-0 md:border-b-0 md:border-r md:px-7 md:first:pl-0 md:last:pr-0"><span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-rose-soft text-rose"><Icon size={22} strokeWidth={1.5}/></span><div><h2 className="text-base font-bold">{label}</h2><p className="mt-2 max-w-64 text-xs leading-6 text-muted-foreground">{text}</p><span className="mt-4 flex items-center gap-3 text-xs font-bold text-primary group-hover:text-rose">{cta}<ArrowRight size={14}/></span></div></Link>)}</div></section>
- <section className="site-container py-16 md:py-20"><div className="grid gap-8 md:grid-cols-[1fr_1.1fr]"><div><p className="eyebrow">Why we exist</p><h2 className="section-title mt-4 max-w-lg">No one should have to<br className="hidden md:block"/> navigate cancer alone.</h2></div><div><p className="text-base leading-8 text-muted-foreground">Cancer care is about more than treatment. It is about understanding your options, finding the right support and feeling connected at every step.</p><p className="mt-4 text-sm leading-7 text-muted-foreground">NCCO’s framework brings together patient navigation, community engagement and research to help build a more connected cancer-care ecosystem.</p><Button asChild variant="link" className="mt-4 px-0"><Link to="/about">Get to know NCCO <ArrowRight/></Link></Button></div></div></section>
- <section className="bg-surface py-16 md:py-20"><div className="site-container"><div className="flex flex-wrap items-end justify-between gap-5"><div><p className="eyebrow">Our areas of focus</p><h2 className="section-title mt-4">Working towards better care.</h2></div><Button asChild variant="link" className="px-0"><Link to="/programmes">Explore our programme priorities <ArrowRight/></Link></Button></div><div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{focus.map(({icon:Icon,title,text,to},i)=><Link to={to} key={title} className="group flex min-h-64 flex-col rounded-md border bg-card p-7 transition-transform hover:-translate-y-1"><Icon size={28} strokeWidth={1.5} className={i%2?'text-primary':'text-rose'}/><h3 className="mt-7 text-lg font-bold leading-6">{title}</h3><p className="mt-3 flex-1 text-sm leading-6 text-muted-foreground">{text}</p><ArrowUpRight size={19} className="mt-6 text-primary group-hover:text-rose"/></Link>)}</div></div></section>
- <section className="site-container grid gap-10 py-16 md:grid-cols-2 md:py-20"><div className="relative overflow-hidden rounded-md"><img src={hero} alt="Illustrative healthcare conversation" loading="lazy" width={1920} height={1024} className="h-full min-h-80 w-full object-cover object-right"/></div><div className="self-center py-3 md:pl-5"><p className="eyebrow">Patient navigation</p><h2 className="section-title mt-4">The next step feels easier<br className="hidden md:block"/> when it’s shared.</h2><p className="mt-5 text-sm leading-7 text-muted-foreground">The NCCO navigation framework is designed to help patients and families find appropriate cancer services, understand referral pathways and connect with support.</p><ul className="mt-6 space-y-4">{['Guidance on finding cancer services','Referral assistance and specialist connections','A focus on support, dignity and privacy'].map(t=><li key={t} className="flex items-center gap-3 text-sm"><span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-teal-soft"><ShieldCheck size={12} className="text-primary"/></span>{t}</li>)}</ul><Button asChild className="mt-8 h-12 px-6"><Link to="/patient-navigation">Explore patient navigation <ArrowUpRight/></Link></Button></div></section>
- <section className="bg-teal-soft"><div className="site-container flex flex-col justify-between gap-8 py-14 md:flex-row md:items-center"><div className="max-w-2xl"><p className="eyebrow">A more connected future</p><h2 className="mt-4 text-3xl font-bold">Introducing CancerConnect.</h2><p className="mt-4 max-w-xl text-sm leading-7 text-muted-foreground">A planned NCCO platform connecting patients, healthcare providers and specialists. Built around navigation, collaboration and responsible patient information.</p></div><div className="shrink-0"><span className="mb-4 block text-xs font-semibold text-primary">In development planning · Not yet live</span><Button asChild variant="outline" className="h-12 bg-transparent"><Link to="/cancerconnect">Explore the vision <ArrowUpRight/></Link></Button></div></div></section>
- <section className="site-container py-16 md:py-20"><div className="grid gap-12 md:grid-cols-2"><div><p className="eyebrow">Knowledge that makes a difference</p><h2 className="section-title mt-4">Evidence for a healthier future.</h2><p className="mt-5 text-sm leading-7 text-muted-foreground">Research, service mapping and programme insights can help reveal where care is needed most. Explore NCCO’s proposed research and Cancer Data Hub.</p><Button asChild variant="link" className="mt-5 px-0"><Link to="/research">Research & data <ArrowRight/></Link></Button></div><div className="border-l-2 border-rose pl-8"><BookOpen size={30} strokeWidth={1.5} className="text-rose"/><h3 className="mt-5 text-xl font-bold">Ask questions. Understand your options.</h3><p className="mt-4 text-sm leading-7 text-muted-foreground">From screening and early detection to survivorship and supportive care, begin with clear information and speak with a qualified healthcare professional.</p><Button asChild variant="link" className="mt-5 px-0"><Link to="/cancer-care">Explore cancer information <ArrowRight/></Link></Button></div></div></section>
- <section className="bg-rose-soft"><div className="site-container flex flex-col items-start justify-between gap-7 py-14 md:flex-row md:items-center"><div><p className="eyebrow">Together, we can do more</p><h2 className="mt-4 text-3xl font-bold">Your support can help shape what’s next.</h2><p className="mt-4 text-sm text-muted-foreground">Volunteer, collaborate or explore ways to support NCCO’s work.</p></div><Button asChild className="h-12 shrink-0 bg-rose px-7 hover:bg-rose/90"><Link to="/get-involved">Get involved <ArrowUpRight/></Link></Button></div></section>
- </main>}
+import { createFileRoute, Link } from "@tanstack/react-router";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Heart,
+  HeartHandshake,
+  BookOpen,
+  Users,
+  ShieldCheck,
+  Activity,
+  Microscope,
+  Sprout,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { pageHead } from "@/lib/ncco-content";
+import hero from "@/assets/ncco-care.jpg";
+export const Route = createFileRoute("/")({
+  head: () =>
+    pageHead(
+      "Northern Cancer Care Organization",
+      "Connecting people, advancing cancer care and saving lives. Explore NCCO’s cancer information, patient navigation, community programmes and research priorities.",
+    ),
+  component: Home,
+});
+const pathways = [
+  {
+    icon: HeartHandshake,
+    label: "Patients & families",
+    text: "Information and guidance for your care journey.",
+    cta: "Find care & support",
+    to: "/patient-navigation",
+  },
+  {
+    icon: Activity,
+    label: "Healthcare professionals",
+    text: "Connect expertise with the people who need it.",
+    cta: "Explore collaboration",
+    to: "/partners",
+  },
+  {
+    icon: Heart,
+    label: "Supporters & partners",
+    text: "Help build a more connected future for cancer care.",
+    cta: "Make a difference",
+    to: "/get-involved",
+  },
+] as const;
+const focus = [
+  {
+    icon: Sprout,
+    title: "Prevention & awareness",
+    text: "Building understanding. Encouraging informed choices.",
+    to: "/cancer-care",
+  },
+  {
+    icon: HeartHandshake,
+    title: "Patient navigation",
+    text: "Connecting people with appropriate care and support.",
+    to: "/patient-navigation",
+  },
+  {
+    icon: Users,
+    title: "Community programmes",
+    text: "Bringing awareness and care closer to communities.",
+    to: "/programmes",
+  },
+  {
+    icon: Microscope,
+    title: "Research & evidence",
+    text: "Understanding gaps. Informing better cancer care.",
+    to: "/research",
+  },
+] as const;
+function Home() {
+  return (
+    <main>
+      <section className="relative isolate overflow-hidden">
+        <img
+          src={hero}
+          alt="Illustration of a compassionate conversation between a Kenyan healthcare professional and a patient"
+          width={1920}
+          height={1024}
+          fetchPriority="high"
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-[65%_center]"
+        />
+        <div className="hero-wash absolute inset-0 -z-10" />
+        <div className="site-container flex min-h-[560px] items-center py-14 md:min-h-[600px]">
+          <div className="entry max-w-[590px]">
+            <p className="eyebrow flex items-center gap-2">
+              <span className="h-1.5 w-1.5 rounded-full bg-rose" />
+              Together, for better cancer care
+            </p>
+            <h1 className="mt-6 text-[32px] font-bold leading-[1.14] md:text-[54px]">
+              Northern Cancer
+              <br />
+              Care Organization<span className="mt-3 block text-rose">Care. Connection. Hope.</span>
+            </h1>
+            <p className="mt-6 max-w-[420px] text-base leading-7 text-muted-foreground">
+              Connecting people to information, support and a more connected path through cancer
+              care.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Button asChild className="h-12 px-6">
+                <Link to="/patient-navigation">
+                  Find care & support <ArrowUpRight />
+                </Link>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                className="h-12 border-primary/30 bg-background/70 px-6"
+              >
+                <Link to="/about">
+                  Discover NCCO <ArrowRight />
+                </Link>
+              </Button>
+            </div>
+            <div className="mt-8 flex items-center gap-2 text-xs text-foreground/80">
+              <ShieldCheck size={16} className="text-primary" />
+              Patient-centred. Community-focused. Evidence-informed.
+            </div>
+          </div>
+        </div>
+      </section>
+      <section aria-label="Find your pathway" className="border-y bg-background">
+        <div className="site-container grid md:grid-cols-3">
+          {pathways.map(({ icon: Icon, label, text, cta, to }) => (
+            <Link
+              to={to}
+              key={label}
+              className="group flex gap-5 border-b py-8 last:border-0 md:border-b-0 md:border-r md:px-7 md:first:pl-0 md:last:pr-0"
+            >
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-rose-soft text-rose">
+                <Icon size={22} strokeWidth={1.5} />
+              </span>
+              <div>
+                <h2 className="text-base font-bold">{label}</h2>
+                <p className="mt-2 max-w-64 text-xs leading-6 text-muted-foreground">{text}</p>
+                <span className="mt-4 flex items-center gap-3 text-xs font-bold text-primary group-hover:text-rose">
+                  {cta}
+                  <ArrowRight size={14} />
+                </span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+      <section className="site-container py-16 md:py-20">
+        <div className="grid gap-8 md:grid-cols-[1fr_1.1fr]">
+          <div>
+            <p className="eyebrow">Why we exist</p>
+            <h2 className="section-title mt-4 max-w-lg">
+              No one should have to
+              <br className="hidden md:block" /> navigate cancer alone.
+            </h2>
+          </div>
+          <div>
+            <p className="text-base leading-8 text-muted-foreground">
+              Cancer care is about more than treatment. It is about understanding your options,
+              finding the right support and feeling connected at every step.
+            </p>
+            <p className="mt-4 text-sm leading-7 text-muted-foreground">
+              NCCO’s framework brings together patient navigation, community engagement and research
+              to help build a more connected cancer-care ecosystem.
+            </p>
+            <Button asChild variant="link" className="mt-4 px-0">
+              <Link to="/about">
+                Get to know NCCO <ArrowRight />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+      <section className="bg-surface py-16 md:py-20">
+        <div className="site-container">
+          <div className="flex flex-wrap items-end justify-between gap-5">
+            <div>
+              <p className="eyebrow">Our areas of focus</p>
+              <h2 className="section-title mt-4">Working towards better care.</h2>
+            </div>
+            <Button asChild variant="link" className="px-0">
+              <Link to="/programmes">
+                Explore our programme priorities <ArrowRight />
+              </Link>
+            </Button>
+          </div>
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {focus.map(({ icon: Icon, title, text, to }, i) => (
+              <Link
+                to={to}
+                key={title}
+                className="group flex min-h-64 flex-col rounded-md border bg-card p-7 transition-transform hover:-translate-y-1"
+              >
+                <Icon
+                  size={28}
+                  strokeWidth={1.5}
+                  className={i % 2 ? "text-primary" : "text-rose"}
+                />
+                <h3 className="mt-7 text-lg font-bold leading-6">{title}</h3>
+                <p className="mt-3 flex-1 text-sm leading-6 text-muted-foreground">{text}</p>
+                <ArrowUpRight size={19} className="mt-6 text-primary group-hover:text-rose" />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="site-container grid gap-10 py-16 md:grid-cols-2 md:py-20">
+        <div className="relative overflow-hidden rounded-md">
+          <img
+            src={hero}
+            alt="Illustrative healthcare conversation"
+            loading="lazy"
+            width={1920}
+            height={1024}
+            className="h-full min-h-80 w-full object-cover object-right"
+          />
+        </div>
+        <div className="self-center py-3 md:pl-5">
+          <p className="eyebrow">Patient navigation</p>
+          <h2 className="section-title mt-4">
+            The next step feels easier
+            <br className="hidden md:block" /> when it’s shared.
+          </h2>
+          <p className="mt-5 text-sm leading-7 text-muted-foreground">
+            The NCCO navigation framework is designed to help patients and families find appropriate
+            cancer services, understand referral pathways and connect with support.
+          </p>
+          <ul className="mt-6 space-y-4">
+            {[
+              "Guidance on finding cancer services",
+              "Referral assistance and specialist connections",
+              "A focus on support, dignity and privacy",
+            ].map((t) => (
+              <li key={t} className="flex items-center gap-3 text-sm">
+                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-teal-soft">
+                  <ShieldCheck size={12} className="text-primary" />
+                </span>
+                {t}
+              </li>
+            ))}
+          </ul>
+          <Button asChild className="mt-8 h-12 px-6">
+            <Link to="/patient-navigation">
+              Explore patient navigation <ArrowUpRight />
+            </Link>
+          </Button>
+        </div>
+      </section>
+      <section className="bg-teal-soft">
+        <div className="site-container flex flex-col justify-between gap-8 py-14 md:flex-row md:items-center">
+          <div className="max-w-2xl">
+            <p className="eyebrow">A more connected future</p>
+            <h2 className="mt-4 text-3xl font-bold">Introducing CancerConnect.</h2>
+            <p className="mt-4 max-w-xl text-sm leading-7 text-muted-foreground">
+              A planned NCCO platform connecting patients, healthcare providers and specialists.
+              Built around navigation, collaboration and responsible patient information.
+            </p>
+          </div>
+          <div className="shrink-0">
+            <span className="mb-4 block text-xs font-semibold text-primary">
+              In development planning · Not yet live
+            </span>
+            <Button asChild variant="outline" className="h-12 bg-transparent">
+              <Link to="/cancerconnect">
+                Explore the vision <ArrowUpRight />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+      <section className="site-container py-16 md:py-20">
+        <div className="grid gap-12 md:grid-cols-2">
+          <div>
+            <p className="eyebrow">Knowledge that makes a difference</p>
+            <h2 className="section-title mt-4">Evidence for a healthier future.</h2>
+            <p className="mt-5 text-sm leading-7 text-muted-foreground">
+              Research, service mapping and programme insights can help reveal where care is needed
+              most. Explore NCCO’s proposed research and Cancer Data Hub.
+            </p>
+            <Button asChild variant="link" className="mt-5 px-0">
+              <Link to="/research">
+                Research & data <ArrowRight />
+              </Link>
+            </Button>
+          </div>
+          <div className="border-l-2 border-rose pl-8">
+            <BookOpen size={30} strokeWidth={1.5} className="text-rose" />
+            <h3 className="mt-5 text-xl font-bold">Ask questions. Understand your options.</h3>
+            <p className="mt-4 text-sm leading-7 text-muted-foreground">
+              From screening and early detection to survivorship and supportive care, begin with
+              clear information and speak with a qualified healthcare professional.
+            </p>
+            <Button asChild variant="link" className="mt-5 px-0">
+              <Link to="/cancer-care">
+                Explore cancer information <ArrowRight />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+      <section className="bg-rose-soft">
+        <div className="site-container flex flex-col items-start justify-between gap-7 py-14 md:flex-row md:items-center">
+          <div>
+            <p className="eyebrow">Together, we can do more</p>
+            <h2 className="mt-4 text-3xl font-bold">Your support can help shape what’s next.</h2>
+            <p className="mt-4 text-sm text-muted-foreground">
+              Volunteer, collaborate or explore ways to support NCCO’s work.
+            </p>
+          </div>
+          <Button asChild className="h-12 shrink-0 bg-rose px-7 hover:bg-rose/90">
+            <Link to="/get-involved">
+              Get involved <ArrowUpRight />
+            </Link>
+          </Button>
+        </div>
+      </section>
+    </main>
+  );
+}

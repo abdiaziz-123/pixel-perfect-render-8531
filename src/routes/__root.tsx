@@ -83,15 +83,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Northern Cancer Care Organization | NCCO" },
       {
         name: "description",
-        content:
-          "Connecting people, advancing cancer care and saving lives.",
+        content: "Connecting people, advancing cancer care and saving lives.",
       },
       { name: "author", content: "Northern Cancer Care Organization" },
       { property: "og:title", content: "Northern Cancer Care Organization" },
       {
         property: "og:description",
-        content:
-          "Connecting people, advancing cancer care and saving lives.",
+        content: "Connecting people, advancing cancer care and saving lives.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
