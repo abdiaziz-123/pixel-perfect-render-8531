@@ -234,3 +234,11 @@ main img {
     transition: none !important;
   }
 }
+@keyframes img-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  main img,
+  nav[aria-label="Mobile navigation"] { animation: none; }
+}

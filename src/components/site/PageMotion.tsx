@@ -38,7 +38,7 @@ function AnimatedPage() {
           "main aside",
         ].join(", "),
       ),
-      ...document.querySelectorAll("body > * footer, footer"),
+      ...document.querySelectorAll("footer"),
     ];
     for (const target of targets) {
       // Already-visible content never waits for scrolling or hydration.
