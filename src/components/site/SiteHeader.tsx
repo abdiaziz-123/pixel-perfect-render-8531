@@ -65,12 +65,12 @@ export function SiteHeader() {
           <Button
             variant="ghost"
             size="icon"
-            className="xl:hidden"
+            className="h-14 w-14 xl:hidden"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen(!open)}
           >
-            {open ? <X /> : <Menu />}
+            {open ? <X size={30} /> : <Menu size={30} />}
           </Button>
         </div>
       </div>
