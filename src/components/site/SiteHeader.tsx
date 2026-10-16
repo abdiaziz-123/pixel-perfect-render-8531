@@ -44,7 +44,7 @@ export function SiteHeader() {
             <span className="font-normal">Organization</span>
           </span>
         </Link>
-        <nav aria-label="Main navigation" className="hidden items-center gap-7 xl:flex">
+        <nav aria-label="Main navigation" className="hidden items-center gap-6 lg:flex">
           {navigation.map((n) => (
             <Link
               key={n.to}
@@ -65,7 +65,7 @@ export function SiteHeader() {
           <Button
             variant="ghost"
             size="icon"
-            className="h-14 w-14 xl:hidden"
+            className="h-14 w-14 lg:hidden"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen(!open)}
@@ -75,7 +75,7 @@ export function SiteHeader() {
         </div>
       </div>
       {open && (
-        <nav aria-label="Mobile navigation" className="site-container border-t pb-5 xl:hidden">
+        <nav aria-label="Mobile navigation" className="site-container border-t pb-5 lg:hidden">
           {[
             ...navigation,
             { label: "Find support", to: "/patient-navigation" as const },
