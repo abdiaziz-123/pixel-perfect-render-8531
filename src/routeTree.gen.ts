@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as CancerCareRouteImport } from './routes/cancer-care'
 import { Route as CancerconnectRouteImport } from './routes/cancerconnect'
@@ -20,10 +21,16 @@ import { Route as PatientNavigationRouteImport } from './routes/patient-navigati
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ProgrammesRouteImport } from './routes/programmes'
 import { Route as ResearchRouteImport } from './routes/research'
+import { Route as StaffRouteImport } from './routes/staff'
+import { Route as AuthenticatedEnquiriesRouteImport } from './routes/_authenticated/enquiries'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
+  id: '/_authenticated',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -76,6 +83,16 @@ const ResearchRoute = ResearchRouteImport.update({
   path: '/research',
   getParentRoute: () => rootRouteImport,
 } as any)
+const StaffRoute = StaffRouteImport.update({
+  id: '/staff',
+  path: '/staff',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedEnquiriesRoute = AuthenticatedEnquiriesRouteImport.update({
+  id: '/enquiries',
+  path: '/enquiries',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -89,6 +106,8 @@ export interface FileRoutesByFullPath {
   '/privacy': typeof PrivacyRoute
   '/programmes': typeof ProgrammesRoute
   '/research': typeof ResearchRoute
+  '/staff': typeof StaffRoute
+  '/enquiries': typeof AuthenticatedEnquiriesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -102,10 +121,13 @@ export interface FileRoutesByTo {
   '/privacy': typeof PrivacyRoute
   '/programmes': typeof ProgrammesRoute
   '/research': typeof ResearchRoute
+  '/staff': typeof StaffRoute
+  '/enquiries': typeof AuthenticatedEnquiriesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/about': typeof AboutRoute
   '/cancer-care': typeof CancerCareRoute
   '/cancerconnect': typeof CancerconnectRoute
@@ -116,6 +138,8 @@ export interface FileRoutesById {
   '/privacy': typeof PrivacyRoute
   '/programmes': typeof ProgrammesRoute
   '/research': typeof ResearchRoute
+  '/staff': typeof StaffRoute
+  '/_authenticated/enquiries': typeof AuthenticatedEnquiriesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -131,6 +155,8 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/programmes'
     | '/research'
+    | '/staff'
+    | '/enquiries'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -144,9 +170,12 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/programmes'
     | '/research'
+    | '/staff'
+    | '/enquiries'
   id:
     | '__root__'
     | '/'
+    | '/_authenticated'
     | '/about'
     | '/cancer-care'
     | '/cancerconnect'
@@ -157,10 +186,13 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/programmes'
     | '/research'
+    | '/staff'
+    | '/_authenticated/enquiries'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
   AboutRoute: typeof AboutRoute
   CancerCareRoute: typeof CancerCareRoute
   CancerconnectRoute: typeof CancerconnectRoute
@@ -171,6 +203,7 @@ export interface RootRouteChildren {
   PrivacyRoute: typeof PrivacyRoute
   ProgrammesRoute: typeof ProgrammesRoute
   ResearchRoute: typeof ResearchRoute
+  StaffRoute: typeof StaffRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -180,6 +213,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated': {
+      id: '/_authenticated'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AuthenticatedRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -252,11 +292,37 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ResearchRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/staff': {
+      id: '/staff'
+      path: '/staff'
+      fullPath: '/staff'
+      preLoaderRoute: typeof StaffRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated/enquiries': {
+      id: '/_authenticated/enquiries'
+      path: '/enquiries'
+      fullPath: '/enquiries'
+      preLoaderRoute: typeof AuthenticatedEnquiriesRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
   }
 }
 
+interface AuthenticatedRouteRouteChildren {
+  AuthenticatedEnquiriesRoute: typeof AuthenticatedEnquiriesRoute
+}
+
+const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedEnquiriesRoute: AuthenticatedEnquiriesRoute,
+}
+
+const AuthenticatedRouteRouteWithChildren =
+  AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
   AboutRoute: AboutRoute,
   CancerCareRoute: CancerCareRoute,
   CancerconnectRoute: CancerconnectRoute,
@@ -267,6 +333,7 @@ const rootRouteChildren: RootRouteChildren = {
   PrivacyRoute: PrivacyRoute,
   ProgrammesRoute: ProgrammesRoute,
   ResearchRoute: ResearchRoute,
+  StaffRoute: StaffRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

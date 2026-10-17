@@ -47,6 +47,7 @@ export function SiteFooter() {
           <Link to="/contact" className="mt-6 flex items-center gap-2 text-xs">
             Contact NCCO <ArrowUpRight size={14} />
           </Link>
+          <p className="mt-6 text-xs text-on-primary/65">Official social media channels: coming soon.</p>
         </div>
       </div>
       <div className="site-container border-t border-on-primary/20 py-6">
@@ -57,7 +58,11 @@ export function SiteFooter() {
         </p>
         <div className="mt-5 flex flex-wrap justify-between gap-3 text-[11px] text-on-primary/65">
           <span>© 2026 Northern Cancer Care Organization.</span>
-          <Link to="/privacy">Privacy & patient information</Link>
+          <span className="flex gap-4">
+            <Link to="/contact">Report incorrect information</Link>
+            <Link to="/privacy">Privacy & patient information</Link>
+            <Link to="/staff">Staff</Link>
+          </span>
         </div>
       </div>
     </footer>

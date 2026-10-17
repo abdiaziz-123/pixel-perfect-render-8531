@@ -73,8 +73,8 @@ export function EnquiryForm({ defaultTopic = "General" }: { defaultTopic?: Topic
       <label className="block font-medium">
         Message
         <textarea name="message" rows={5} maxLength={2000} className={field} />
-        {errors.message && (
-          <span className="mt-1 block text-xs text-destructive">{errors.message}</span>
+        {errors["message"] && (
+          <span className="mt-1 block text-xs text-destructive">{errors["message"]}</span>
         )}
       </label>
       <input
