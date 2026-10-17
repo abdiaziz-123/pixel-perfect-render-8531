@@ -2,6 +2,9 @@ import { Link } from "@tanstack/react-router";
 import { ArrowUpRight, ChevronRight, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { pages } from "@/lib/ncco-content";
+import { EnquiryForm } from "@/components/site/EnquiryForm";
+
+const formTopic = { contact: "General", partners: "Partnership", "get-involved": "Volunteering", research: "Research" } as const;
 export function ContentPage({ pageKey }: { pageKey: keyof typeof pages }) {
   const page: import("@/lib/ncco-content").PageContent = pages[pageKey];
   return (
@@ -34,7 +37,9 @@ export function ContentPage({ pageKey }: { pageKey: keyof typeof pages }) {
           <p className="mt-4 text-sm leading-7 text-muted-foreground">
             Have a question about NCCO or its proposed services? Start with a general enquiry.
           </p>
-          {page.action && (
+          {pageKey in formTopic ? (
+            <EnquiryForm defaultTopic={formTopic[pageKey as keyof typeof formTopic]} />
+          ) : page.action && (
             <Button
               asChild
               className="mt-6 h-auto min-h-12 w-full whitespace-normal px-4 py-3 text-left"
@@ -52,7 +57,7 @@ export function ContentPage({ pageKey }: { pageKey: keyof typeof pages }) {
             Your privacy comes first
           </div>
           <p className="mt-3 text-xs leading-6 text-muted-foreground">
-            Please do not send sensitive health information or medical records by ordinary email.
+            Please do not send sensitive health information or medical records through this website or by email.
           </p>
           <Link
             to="/privacy"
