@@ -19,22 +19,30 @@ export const pages = {
     title: "People at the heart of cancer care.",
     eyebrow: "About NCCO",
     intro:
-      "Northern Cancer Care Organization brings together patient navigation, community programmes and evidence to advance access to cancer care.",
+      "Northern Cancer Care Organization (NCCO) is a proposed national non-profit organization committed to reducing the burden of cancer through prevention, early detection, patient navigation, support, research, data and strategic partnerships.",
     sections: [
       {
-        title: "Our purpose",
-        text: "Connecting People. Advancing Cancer Care. Saving Lives. The NCCO framework puts patients, families, healthcare providers and specialists at the centre of a more connected cancer-care ecosystem.",
+        title: "Our vision",
+        text: "A cancer-free and informed Northern Kenya where every person has access to timely prevention, early detection, quality care and support. As NCCO expands, its vision is to contribute to improved cancer outcomes nationally and develop meaningful international partnerships.",
       },
       {
-        title: "Our direction",
-        text: "Our priorities are accessible cancer information, navigation and referral coordination, community awareness, and research that helps identify gaps in care.",
+        title: "Our mission",
+        text: "To reduce the burden of cancer through prevention, early detection, patient-centered support, specialist connectivity, research, reliable data, education and strategic partnerships.",
+      },
+      {
+        title: "Our core values",
+        text: "Compassion — patients, families and communities at the centre of our work. Equity — fair access to cancer information, navigation and support. Integrity — transparent and responsible operations. Collaboration — cancer control requires partnerships. Innovation — practical, responsible approaches. Evidence — programmes informed by reliable evidence and data. Dignity — every person affected by cancer deserves respect.",
       },
       {
         title: "Our approach",
-        text: "Compassion, collaboration and responsible use of information guide the proposed NCCO ecosystem. Patient privacy and appropriate consent belong at the heart of every service.",
+        text: "NCCO works across the full cancer continuum — prevention, early detection, diagnosis, treatment, supportive care, survivorship and palliative care — alongside existing healthcare systems, never replacing hospitals, doctors or licensed providers. Clinical decisions remain with appropriately qualified healthcare professionals.",
+      },
+      {
+        title: "Strategic objectives 2027–2029",
+        text: "Promote cancer prevention and public awareness; support early detection and screening awareness; improve patient navigation and psychosocial support; connect patients with verified specialists and services; strengthen cancer-related research and data; build healthcare-professional collaboration; and develop strategic partnerships across government, healthcare and international organisations.",
       },
     ],
-    note: "Leadership, board membership, organisational history and formal mission and vision statements will be added once confirmed by NCCO.",
+    note: "NCCO is a proposed organization in its establishment phase. Registration details, head office and founding committee names will be published once formally confirmed.",
     action: "Connect with NCCO",
     subject: "About NCCO",
   },
@@ -97,29 +105,37 @@ export const pages = {
     subject: "Patient navigation — general enquiry",
   },
   programmes: {
-    title: "Care starts in the community.",
-    eyebrow: "Our programme priorities",
+    title: "Five flagship programmes. One connected mission.",
+    eyebrow: "NCCO flagship programmes",
     intro:
-      "The NCCO framework identifies four connected priorities: community engagement, screening, awareness and patient support.",
+      "NCCO’s 2027–2029 strategy is built around five connected flagship programmes: Prevent, Detect, Support, CancerConnect, and Research & Data.",
     sections: [
       {
-        title: "Community programmes",
-        text: "Building local awareness and helping communities understand cancer-care pathways are central to the proposed programme approach.",
+        title: "Program 1 · NCCO Prevent",
+        text: "Cancer prevention and public awareness. Community education on cancer risk factors, prevention and early warning signs — building knowledge that supports informed choices and earlier help-seeking.",
       },
       {
-        title: "Screening programmes",
-        text: "The framework prioritises screening access and appropriate referral pathways. Confirm current screening availability directly with NCCO or a qualified healthcare provider.",
+        title: "Program 2 · NCCO Detect",
+        text: "Early detection and screening navigation. Working with qualified healthcare providers and facilities to promote appropriate screening: public education on early warning signs, screening-awareness campaigns, referral navigation, community outreach and follow-up after screening where appropriate.",
       },
       {
-        title: "Awareness campaigns",
-        text: "Cancer information and community engagement can support earlier help-seeking, informed conversations and reduced stigma.",
+        title: "Program 3 · NCCO Support",
+        text: "Patient navigation and psychosocial support. Helping patients, caregivers and families understand referrals, find appropriate services and access support — through referral partnerships with qualified professionals, never unlicensed clinical services.",
       },
       {
-        title: "Patient support",
-        text: "Navigation, referral coordination and connections to support services are intended to help patients and families through their care journey.",
+        title: "Program 4 · NCCO CancerConnect",
+        text: "A patient and specialist connectivity platform — one of NCCO’s major long-term initiatives. The proposed model connects patients to verified healthcare facilities, professionals and appropriate specialist services, with follow-up and support.",
+      },
+      {
+        title: "Program 5 · NCCO Research & Data",
+        text: "Supporting the development of reliable cancer-related information: cancer-service mapping, community needs assessments, programme monitoring and research partnerships.",
+      },
+      {
+        title: "Professional Cancer Network & Advisory Group",
+        text: "NCCO plans a Professional Cancer Network — oncologists, nurses, psychologists, nutrition professionals, palliative-care professionals, public-health specialists and researchers — and a Patient & Survivor Advisory Group so people affected by cancer help shape every programme.",
       },
     ],
-    note: "Dates, locations and enrolment details have not yet been supplied. Contact NCCO to confirm any available activities.",
+    note: "Programme dates, locations and enrolment details have not yet been supplied. Contact NCCO to confirm any available activities.",
     action: "Ask about programmes",
     subject: "Programme availability enquiry",
   },
@@ -127,19 +143,19 @@ export const pages = {
     title: "Better evidence. Better cancer care.",
     eyebrow: "Research & data",
     intro:
-      "NCCO’s proposed research and data ecosystem aims to turn responsible evidence into a better understanding of cancer-care access and service gaps.",
+      "NCCO’s research and data programme aims to turn responsible evidence into a better understanding of cancer-care access and service gaps.",
     sections: [
       {
         title: "Research collaboration",
         text: "The framework sets out a research pathway from a question and proposal through ethics approval, data collection, analysis and publication.",
       },
       {
-        title: "Cancer Data Hub",
-        text: "The proposed hub would bring together approved information on service availability, screening access, referral patterns, geographic gaps and programme outcomes.",
+        title: "Cancer-service mapping & needs assessment",
+        text: "Planned activities include mapping cancer services, community needs assessments and programme monitoring — revealing where care is needed most.",
       },
       {
         title: "Monitoring & evaluation",
-        text: "Programme indicators are intended to connect inputs and activities to outputs, outcomes and impact, supporting accountability and informed decisions.",
+        text: "NCCO will track people reached through awareness, screenings supported, referrals facilitated, counties reached, healthcare workers engaged, research projects supported, partnerships established, funds mobilized and patient satisfaction — with baseline measurements before final numerical targets.",
       },
       {
         title: "Reports & publications",
@@ -154,19 +170,27 @@ export const pages = {
     title: "Progress through partnership.",
     eyebrow: "Partners & collaboration",
     intro:
-      "Connected cancer care takes collaboration across healthcare, research, community organisations and public institutions.",
+      "NCCO’s partnership strategy spans government, healthcare, community and international organisations — because cancer control requires collaboration.",
     sections: [
       {
-        title: "Hospitals & healthcare providers",
-        text: "The NCCO framework invites collaboration around service information, patient navigation and appropriate referral pathways.",
+        title: "Government & public institutions",
+        text: "National health institutions, county governments and relevant public-health agencies are central to the proposed collaboration ecosystem.",
       },
       {
-        title: "Universities & researchers",
-        text: "Research partnerships can help develop ethical studies, strengthen evidence and understand unmet cancer-care needs.",
+        title: "Healthcare providers",
+        text: "Public hospitals, private hospitals, cancer centres and specialist clinics — collaboration around service information, patient navigation and appropriate referral pathways.",
       },
       {
-        title: "Community & international partners",
-        text: "NGOs, government institutions and international organisations are part of the proposed collaboration ecosystem.",
+        title: "Research & academia",
+        text: "Universities and research institutions can help develop ethical studies, strengthen evidence and understand unmet cancer-care needs.",
+      },
+      {
+        title: "Corporate & technology partners",
+        text: "Technology companies, corporate social responsibility programmes, and pharmaceutical and healthcare organizations — subject to appropriate safeguards.",
+      },
+      {
+        title: "International partners",
+        text: "Cancer organizations, international NGOs, foundations and global health organizations are part of NCCO’s long-term partnership vision.",
       },
     ],
     note: "Confirmed partners have not yet been supplied. No institutional affiliation or endorsement is implied.",
@@ -189,7 +213,7 @@ export const pages = {
       },
       {
         title: "Support NCCO",
-        text: "Contact NCCO for verified donation arrangements. Online donations and payment details are not yet available on this website.",
+        text: "NCCO pursues diversified funding — competitive grants, foundations, corporate partnerships, individual donations, fundraising campaigns and institutional partnerships. Contact NCCO for verified donation arrangements; online donations are not yet available on this website.",
       },
       {
         title: "Collaborate on research",
@@ -203,19 +227,19 @@ export const pages = {
     title: "Connecting the cancer-care community.",
     eyebrow: "CancerConnect · Planned",
     intro:
-      "CancerConnect is NCCO’s proposed digital platform for connecting patients, healthcare providers and specialists.",
+      "CancerConnect is NCCO’s proposed digital and patient-navigation platform — designed to help patients find appropriate cancer-related services and connect with verified healthcare professionals and support services, locally and, where appropriate, internationally.",
     sections: [
       {
-        title: "For patients",
-        text: "Planned capabilities include navigation assistance, service information, referral updates and educational resources.",
+        title: "The proposed model",
+        text: "Patient → NCCO CancerConnect → Verified healthcare facility or professional → Appropriate specialist or service → Follow-up and support.",
       },
       {
-        title: "For providers",
-        text: "The proposed provider experience supports appropriate referrals and access to cancer-service information.",
+        title: "Potential features",
+        text: "Cancer information, a healthcare-facility directory, navigation assistance, referral updates and educational resources for patients; appropriate referrals and cancer-service information for providers; a network for specialists to share expertise.",
       },
       {
-        title: "For specialists",
-        text: "The proposed network would help specialists share expertise and participate in coordinated referrals.",
+        title: "Built on trust",
+        text: "The system is designed around patient consent, confidentiality, data protection, professional verification, appropriate clinical governance, secure technology and clear accountability.",
       },
       {
         title: "Privacy by design",
