@@ -94,18 +94,15 @@ function Home() {
           <div className="entry max-w-[590px]">
             <p className="eyebrow flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-rose" />
-              Together, for better cancer care
+              Northern Cancer Care Organization
             </p>
-            <h1 className="mt-6 text-[32px] font-bold leading-[1.14] md:text-[54px]">
-              Northern Cancer
+            <h1 className="mt-6 text-[34px] font-bold leading-[1.14] md:text-[54px]">
+              Connecting People.
               <br />
-              Care Organization
-            </h1>
-            <p className="mt-6 max-w-[520px] text-xl font-bold leading-8 text-rose md:text-2xl md:leading-9">
-              Connecting People.<br />
-              Advancing Cancer Care.<br />
+              Advancing Cancer Care.
+              <br />
               Saving Lives.
-            </p>
+            </h1>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild className="h-12 px-6">
                 <Link to="/patient-navigation">
