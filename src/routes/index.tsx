@@ -99,10 +99,12 @@ function Home() {
             <h1 className="mt-6 text-[32px] font-bold leading-[1.14] md:text-[54px]">
               Northern Cancer
               <br />
-              Care Organization<span className="mt-3 block text-rose">Care. Connection. Hope.</span>
+              Care Organization
             </h1>
-            <p className="mt-6 max-w-[420px] text-base leading-7 text-muted-foreground">
-              Connecting People. Advancing Cancer Care. Saving Lives.
+            <p className="mt-6 max-w-[520px] text-xl font-bold leading-8 text-rose md:text-2xl md:leading-9">
+              Connecting People.<br />
+              Advancing Cancer Care.<br />
+              Saving Lives.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild className="h-12 px-6">
