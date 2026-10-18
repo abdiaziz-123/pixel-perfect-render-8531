@@ -48,26 +48,32 @@ const pathways = [
 const focus = [
   {
     icon: Sprout,
-    title: "Prevention & awareness",
-    text: "Building understanding. Encouraging informed choices.",
+    title: "NCCO Prevent",
+    text: "Planned community education, cancer prevention and awareness.",
     to: "/cancer-care",
   },
   {
-    icon: HeartHandshake,
-    title: "Patient navigation",
-    text: "Connecting people with appropriate care and support.",
-    to: "/patient-navigation",
-  },
-  {
-    icon: Users,
-    title: "Community programmes",
-    text: "Bringing awareness and care closer to communities.",
+    icon: Activity,
+    title: "NCCO Detect",
+    text: "Planned early-detection education and screening navigation.",
     to: "/programmes",
   },
   {
+    icon: Users,
+    title: "NCCO Support",
+    text: "Planned patient, caregiver and survivor support and referrals.",
+    to: "/programmes",
+  },
+  {
+    icon: HeartHandshake,
+    title: "NCCO CancerConnect",
+    text: "A proposed platform for patient and specialist connectivity.",
+    to: "/cancerconnect",
+  },
+  {
     icon: Microscope,
-    title: "Research & evidence",
-    text: "Understanding gaps. Informing better cancer care.",
+    title: "NCCO Research & Data",
+    text: "Planned service mapping, needs assessments and research partnerships.",
     to: "/research",
   },
 ] as const;
@@ -96,8 +102,7 @@ function Home() {
               Care Organization<span className="mt-3 block text-rose">Care. Connection. Hope.</span>
             </h1>
             <p className="mt-6 max-w-[420px] text-base leading-7 text-muted-foreground">
-              Connecting people to information, support and a more connected path through cancer
-              care.
+              Connecting People. Advancing Cancer Care. Saving Lives.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild className="h-12 px-6">
@@ -160,8 +165,10 @@ function Home() {
               finding the right support and feeling connected at every step.
             </p>
             <p className="mt-4 text-sm leading-7 text-muted-foreground">
-              NCCO’s framework brings together patient navigation, community engagement and research
-              to help build a more connected cancer-care ecosystem.
+              NCCO is a proposed national non-profit organisation whose vision begins with an
+              informed Northern Kenya and access to timely prevention, early detection, quality
+              care and support. Its 2027–2029 strategy brings together communities, healthcare
+              professionals and partners, with an ambition to expand across Kenya.
             </p>
             <Button asChild variant="link" className="mt-4 px-0">
               <Link to="/about">
@@ -175,8 +182,8 @@ function Home() {
         <div className="site-container">
           <div className="flex flex-wrap items-end justify-between gap-5">
             <div>
-              <p className="eyebrow">Our areas of focus</p>
-              <h2 className="section-title mt-4">Working towards better care.</h2>
+              <p className="eyebrow">Five proposed flagship programmes</p>
+              <h2 className="section-title mt-4">One connected mission.</h2>
             </div>
             <Button asChild variant="link" className="px-0">
               <Link to="/programmes">
@@ -184,7 +191,7 @@ function Home() {
               </Link>
             </Button>
           </div>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {focus.map(({ icon: Icon, title, text, to }, i) => (
               <Link
                 to={to}
@@ -275,7 +282,7 @@ function Home() {
             <h2 className="section-title mt-4">Evidence for a healthier future.</h2>
             <p className="mt-5 text-sm leading-7 text-muted-foreground">
               Research, service mapping and programme insights can help reveal where care is needed
-              most. Explore NCCO’s proposed research and Cancer Data Hub.
+              most. Explore NCCO’s proposed research and long-term Cancer Data Observatory.
             </p>
             <Button asChild variant="link" className="mt-5 px-0">
               <Link to="/research">

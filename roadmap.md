@@ -4,3 +4,5 @@
 - [x] Verify navigation, mobile layout, original logo and contact links.
 - [x] Apply required package security update.
 - [x] Add and verify homepage entrances, page transitions and link motion with reduced-motion support.
+- [x] Align website content with the newly supplied NCCO Organization Profile & Concept Note (2027–2029).
+- [x] Verify updated pages and homepage navigation.

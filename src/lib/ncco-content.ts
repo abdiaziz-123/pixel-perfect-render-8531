@@ -41,6 +41,14 @@ export const pages = {
         title: "Strategic objectives 2027–2029",
         text: "Promote cancer prevention and public awareness; support early detection and screening awareness; improve patient navigation and psychosocial support; connect patients with verified specialists and services; strengthen cancer-related research and data; build healthcare-professional collaboration; and develop strategic partnerships across government, healthcare and international organisations.",
       },
+      {
+        title: "Proposed governance & accountability",
+        text: "The profile proposes a Board of Directors or Trustees providing oversight, an Executive Director and Deputy Executive Director, and five core departments: Cancer Programs & Patient Support; Medical & Clinical Affairs; Finance & Administration; Partnerships & Resource Mobilization; and Research, Data & Communications. Regional and county coordinators and community cancer champions would support local engagement. A seven-person founding committee is proposed; individual appointments have not been confirmed.",
+      },
+      {
+        title: "A sustainable organisation",
+        text: "NCCO’s sustainability strategy combines strong governance, diversified funding, partnerships, measurable impact, community ownership and responsible technology. Institutional capacity will be developed so programmes do not depend on one donor or one individual.",
+      },
     ],
     note: "NCCO is a proposed organization in its establishment phase. Registration details, head office and founding committee names will be published once formally confirmed.",
     action: "Connect with NCCO",
@@ -112,7 +120,7 @@ export const pages = {
     sections: [
       {
         title: "Program 1 · NCCO Prevent",
-        text: "Cancer prevention and public awareness. Community education on cancer risk factors, prevention and early warning signs — building knowledge that supports informed choices and earlier help-seeking.",
+        text: "Planned cancer prevention and public awareness activities include community cancer education, awareness campaigns, health education materials, community forums, youth and school-based awareness where appropriate, evidence-based prevention measures and cancer risk-factor education.",
       },
       {
         title: "Program 2 · NCCO Detect",
@@ -120,7 +128,7 @@ export const pages = {
       },
       {
         title: "Program 3 · NCCO Support",
-        text: "Patient navigation and psychosocial support. Helping patients, caregivers and families understand referrals, find appropriate services and access support — through referral partnerships with qualified professionals, never unlicensed clinical services.",
+        text: "Planned patient, caregiver and survivor support includes patient navigation, caregiver education, patient education, psychosocial and social-support referrals, survivorship support, and palliative and supportive-care referrals. NCCO intends to establish partnerships with qualified professionals, not provide specialised clinical services without appropriate licensing.",
       },
       {
         title: "Program 4 · NCCO CancerConnect",
@@ -131,11 +139,27 @@ export const pages = {
         text: "Supporting the development of reliable cancer-related information: cancer-service mapping, community needs assessments, programme monitoring and research partnerships.",
       },
       {
-        title: "Professional Cancer Network & Advisory Group",
-        text: "NCCO plans a Professional Cancer Network — oncologists, nurses, psychologists, nutrition professionals, palliative-care professionals, public-health specialists and researchers — and a Patient & Survivor Advisory Group so people affected by cancer help shape every programme.",
+        title: "Professional Cancer Network",
+        text: "NCCO plans to bring together qualified oncologists, surgeons, pathologists, radiologists, oncology nurses, pharmacists, psychologists, nutrition professionals, palliative-care professionals, public-health specialists and researchers. The proposed network would support referral collaboration, professional education, multidisciplinary working, research and cancer-awareness initiatives.",
+      },
+      {
+        title: "Patient & Survivor Advisory Group",
+        text: "A proposed advisory group will give people affected by cancer a voice in programme development. Feedback would cover patient experience, barriers to care, navigation, support services, cancer information, digital-platform development and community needs.",
+      },
+      {
+        title: "2027 · Foundation",
+        text: "The proposed first year focuses on governance, policies and procedures, organisational identity, initial partnerships, community needs assessment, programme design, CancerConnect requirements, fundraising systems and recruitment of key volunteers and staff.",
+      },
+      {
+        title: "2028 · Pilot & expansion",
+        text: "The proposed second year moves towards implementation: expanded awareness campaigns, patient-navigation and CancerConnect pilots, a healthcare-professional network, hospital partnerships, research and data initiatives, and stronger donor relationships.",
+      },
+      {
+        title: "2029 · Scale & national collaboration",
+        text: "The proposed third year expands successful programmes into additional counties, strengthens CancerConnect and the professional network, publishes reports, develops international partnerships and fundraising, evaluates the strategy and prepares the next five-year strategic plan.",
       },
     ],
-    note: "Programme dates, locations and enrolment details have not yet been supplied. Contact NCCO to confirm any available activities.",
+    note: "This is the proposed 2027–2029 implementation plan, not a schedule of live services. Programme locations, activity dates and enrolment details have not yet been confirmed.",
     action: "Ask about programmes",
     subject: "Programme availability enquiry",
   },
@@ -155,11 +179,15 @@ export const pages = {
       },
       {
         title: "Monitoring & evaluation",
-        text: "NCCO will track people reached through awareness, screenings supported, referrals facilitated, counties reached, healthcare workers engaged, research projects supported, partnerships established, funds mobilized and patient satisfaction — with baseline measurements before final numerical targets.",
+        text: "The proposed indicators include people reached through cancer education, awareness campaigns conducted, patients supported through navigation, healthcare facilities partnered with, verified professionals participating, referrals facilitated, counties reached, healthcare workers engaged or trained, research projects supported, partnerships established, funds mobilized and patient or user satisfaction. Baseline measurements must be established before final numerical targets are set.",
       },
       {
         title: "Reports & publications",
         text: "Verified publications, approved datasets and cancer reports will be listed when available. No public research datasets or published NCCO reports have been provided yet.",
+      },
+      {
+        title: "NCCO Cancer Data Observatory · Planned",
+        text: "The profile’s long-term ambition is a future platform helping stakeholders understand cancer-service needs and gaps across different regions. Proposed work includes data analysis, service-gap identification, reports and collaboration with universities and research institutions. No observatory or public data platform is currently available on this website.",
       },
     ],
     note: "The Data Observatory and dashboards are planned. Patient information must not be published or shared without appropriate authorisation and safeguards.",
@@ -192,6 +220,10 @@ export const pages = {
         title: "International partners",
         text: "Cancer organizations, international NGOs, foundations and global health organizations are part of NCCO’s long-term partnership vision.",
       },
+      {
+        title: "Strategic funding priorities 2027–2029",
+        text: "NCCO seeks partners and donors for community cancer awareness, early detection and screening navigation, patient support, CancerConnect development, research and data, healthcare-professional engagement, training, monitoring and evaluation, organisational development, and county and community expansion. A detailed budget is to be developed after the initial needs assessment and implementation design; no funding amount has been confirmed.",
+      },
     ],
     note: "Confirmed partners have not yet been supplied. No institutional affiliation or endorsement is implied.",
     action: "Start a partnership conversation",
@@ -213,7 +245,7 @@ export const pages = {
       },
       {
         title: "Support NCCO",
-        text: "NCCO pursues diversified funding — competitive grants, foundations, corporate partnerships, individual donations, fundraising campaigns and institutional partnerships. Contact NCCO for verified donation arrangements; online donations are not yet available on this website.",
+        text: "The proposed funding strategy includes competitive and research grants, foundations, corporate and institutional partnerships, individual donations, fundraising campaigns and events. Funding must follow governance, financial and conflict-of-interest policies. Contact NCCO for verified donation arrangements; online donations are not yet available on this website.",
       },
       {
         title: "Collaborate on research",
@@ -235,7 +267,11 @@ export const pages = {
       },
       {
         title: "Potential features",
-        text: "Cancer information, a healthcare-facility directory, navigation assistance, referral updates and educational resources for patients; appropriate referrals and cancer-service information for providers; a network for specialists to share expertise.",
+        text: "Proposed features include cancer information, healthcare-facility and verified-professional directories, referral navigation, appointment requests, specialist connectivity, appropriate teleconsultation partnerships, a support-service directory, follow-up tools, patient resources, and data and monitoring functions. These are potential features, not services currently offered by this website.",
+      },
+      {
+        title: "International connectivity · Proposed",
+        text: "Where appropriate and legally permitted, CancerConnect could facilitate connections with specialists and institutions outside Kenya. Any future arrangements must meet consent, professional-verification, privacy and clinical-governance requirements; no international referral service is currently live here.",
       },
       {
         title: "Built on trust",
