@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
   ArrowUpRight,
-  Heart,
   HeartHandshake,
   BookOpen,
   Users,
@@ -10,6 +9,10 @@ import {
   Activity,
   Microscope,
   Sprout,
+  Landmark,
+  Stethoscope,
+  GraduationCap,
+  Globe2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { pageHead } from "@/lib/ncco-content";
@@ -18,31 +21,38 @@ export const Route = createFileRoute("/")({
   head: () =>
     pageHead(
       "Northern Cancer Care Organization",
-      "Connecting people, advancing cancer care and saving lives. Explore NCCO’s cancer information, patient navigation, community programmes and research priorities.",
+      "Connecting people, advancing cancer care and saving lives. NCCO works with government, healthcare providers, researchers and international partners to build connected cancer care in Northern Kenya.",
     ),
   component: Home,
 });
-const pathways = [
+const audiences = [
   {
-    icon: HeartHandshake,
-    label: "Patients & families",
-    text: "Information and guidance for your care journey.",
-    cta: "Find care & support",
-    to: "/patient-navigation",
-  },
-  {
-    icon: Activity,
-    label: "Healthcare professionals",
-    text: "Connect expertise with the people who need it.",
-    cta: "Explore collaboration",
+    icon: Landmark,
+    label: "Government",
+    text: "National and county health institutions.",
+    cta: "Learn more",
     to: "/partners",
   },
   {
-    icon: Heart,
-    label: "Supporters & partners",
-    text: "Help build a more connected future for cancer care.",
-    cta: "Make a difference",
-    to: "/get-involved",
+    icon: Stethoscope,
+    label: "Healthcare providers",
+    text: "Hospitals, cancer centres and specialist clinics.",
+    cta: "Learn more",
+    to: "/partners",
+  },
+  {
+    icon: GraduationCap,
+    label: "Research & academia",
+    text: "Universities and research institutions.",
+    cta: "Learn more",
+    to: "/partners",
+  },
+  {
+    icon: Globe2,
+    label: "International partners",
+    text: "NGOs, foundations and global health organizations.",
+    cta: "Learn more",
+    to: "/partners",
   },
 ] as const;
 const focus = [
