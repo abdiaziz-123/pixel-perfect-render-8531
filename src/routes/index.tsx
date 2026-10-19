@@ -113,10 +113,14 @@ function Home() {
               <br />
               Saving Lives.
             </h1>
+            <p className="mt-6 max-w-xl text-sm leading-7 text-foreground/85 md:text-base md:leading-8">
+              NCCO works with government, healthcare providers, researchers and international
+              partners to build connected, accountable cancer care for Northern Kenya.
+            </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild className="h-12 px-6">
-                <Link to="/patient-navigation">
-                  Find care & support <ArrowUpRight />
+                <Link to="/partners">
+                  Partner with NCCO <HeartHandshake />
                 </Link>
               </Button>
               <Button
@@ -125,20 +129,20 @@ function Home() {
                 className="h-12 border-primary/30 bg-background/70 px-6"
               >
                 <Link to="/about">
-                  Discover NCCO <ArrowRight />
+                  Our 2027–2029 strategy <ArrowRight />
                 </Link>
               </Button>
             </div>
             <div className="mt-8 flex items-center gap-2 text-xs text-foreground/80">
               <ShieldCheck size={16} className="text-primary" />
-              Patient-centred. Community-focused. Evidence-informed.
+              Governance-led. Evidence-informed. Built for partnership.
             </div>
           </div>
         </div>
       </section>
-      <section aria-label="Find your pathway" className="border-y bg-background">
-        <div className="site-container grid md:grid-cols-3">
-          {pathways.map(({ icon: Icon, label, text, cta, to }) => (
+      <section aria-label="Who we work with" className="border-y bg-background">
+        <div className="site-container grid sm:grid-cols-2 md:grid-cols-4">
+          {audiences.map(({ icon: Icon, label, text, cta, to }) => (
             <Link
               to={to}
               key={label}
@@ -216,6 +220,46 @@ function Home() {
                 <p className="mt-3 flex-1 text-sm leading-6 text-muted-foreground">{text}</p>
                 <ArrowUpRight size={19} className="mt-6 text-primary group-hover:text-rose" />
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="site-container py-16 md:py-20">
+        <div className="grid gap-10 md:grid-cols-[1fr_1.2fr]">
+          <div>
+            <p className="eyebrow">For funders & institutional partners</p>
+            <h2 className="section-title mt-4 max-w-md">Invest in connected cancer care.</h2>
+            <p className="mt-5 text-sm leading-7 text-muted-foreground">
+              NCCO’s 2027–2029 strategy sets out clear funding priorities — with governance,
+              monitoring and evaluation built in from the start. A detailed budget will follow the
+              initial needs assessment and implementation design.
+            </p>
+            <Button asChild className="mt-8 h-12 px-6">
+              <Link to="/partners">
+                Start a partnership conversation <ArrowUpRight />
+              </Link>
+            </Button>
+          </div>
+          <div className="grid content-start gap-3 sm:grid-cols-2">
+            {[
+              "Community cancer awareness",
+              "Early detection & screening navigation",
+              "Patient support",
+              "CancerConnect development",
+              "Research & data",
+              "Healthcare-professional engagement",
+              "Training",
+              "Monitoring & evaluation",
+              "Organisational development",
+              "County & community expansion",
+            ].map((t) => (
+              <div
+                key={t}
+                className="flex items-center gap-3 rounded-md border bg-card px-4 py-3 text-sm"
+              >
+                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-rose" />
+                {t}
+              </div>
             ))}
           </div>
         </div>
@@ -318,14 +362,15 @@ function Home() {
         <div className="site-container flex flex-col items-start justify-between gap-7 py-14 md:flex-row md:items-center">
           <div>
             <p className="eyebrow">Together, we can do more</p>
-            <h2 className="mt-4 text-3xl font-bold">Your support can help shape what’s next.</h2>
+            <h2 className="mt-4 text-3xl font-bold">Build the future of cancer care with us.</h2>
             <p className="mt-4 text-sm text-muted-foreground">
-              Volunteer, collaborate or explore ways to support NCCO’s work.
+              Government, healthcare providers, research institutions, corporates and international
+              partners — explore what collaboration could look like.
             </p>
           </div>
           <Button asChild className="h-12 shrink-0 bg-rose px-7 hover:bg-rose/90">
-            <Link to="/get-involved">
-              Get involved <ArrowUpRight />
+            <Link to="/partners">
+              Start a partnership <ArrowUpRight />
             </Link>
           </Button>
         </div>
