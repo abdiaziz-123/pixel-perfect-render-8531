@@ -187,9 +187,9 @@ function Home() {
               feeling connected at every step.
             </p>
             <p className="mt-4 text-sm leading-7 text-muted-foreground">
-              NCCO is a proposed national non-profit organisation whose vision begins with an
-              informed Northern Kenya and access to timely prevention, early detection, quality
-              care and support. Its 2027–2029 strategy brings together communities, healthcare
+              NCCO is a pre-launch Kenyan non-profit whose vision begins with an informed
+              Northern Kenya and access to timely prevention, early detection, quality care and
+              support. Its 2027–2029 strategy brings together communities, healthcare
               professionals and partners, with an ambition to expand across Kenya.
             </p>
             <Button asChild variant="link" className="mt-4 px-0">
