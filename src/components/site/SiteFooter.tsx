@@ -14,7 +14,7 @@ export function SiteFooter() {
             className="h-28 w-28 rounded-md bg-background p-2 object-contain"
           />
           <p className="mt-4 max-w-64 text-sm leading-6 text-on-primary/75">
-            Connecting people. Advancing cancer care. Saving lives.
+            Connecting people. Advancing cancer care. Saving lives. Pre-launch — launching 2027.
           </p>
         </div>
         <div>

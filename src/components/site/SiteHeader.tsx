@@ -10,7 +10,7 @@ export function SiteHeader() {
     <header className="relative z-30 bg-background">
       <div className="bg-primary text-on-primary">
         <div className="site-container flex min-h-9 items-center justify-between gap-4 py-2 text-[11px]">
-          <span>Connecting People. Advancing Cancer Care. Saving Lives.</span>
+          <span>Pre-launch · Connecting People. Advancing Cancer Care. Saving Lives.</span>
           <a
             className="hidden items-center gap-2 sm:flex"
             href="mailto:info@northerncancercare.org"
