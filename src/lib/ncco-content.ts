@@ -19,7 +19,7 @@ export const pages = {
     title: "People at the heart of cancer care.",
     eyebrow: "About NCCO",
     intro:
-      "Northern Cancer Care Organization (NCCO) is a proposed national non-profit organization committed to reducing the burden of cancer through prevention, early detection, patient navigation, support, research, data and strategic partnerships.",
+      "Northern Cancer Care Organization (NCCO) is a Kenyan non-profit in its pre-launch phase — an organization in formation, preparing to reduce the burden of cancer through prevention, early detection, patient navigation, support, research, data and strategic partnerships ahead of its 2027–2029 programme launch.",
     sections: [
       {
         title: "Our vision",
@@ -50,7 +50,7 @@ export const pages = {
         text: "NCCO’s sustainability strategy combines strong governance, diversified funding, partnerships, measurable impact, community ownership and responsible technology. Institutional capacity will be developed so programmes do not depend on one donor or one individual.",
       },
     ],
-    note: "NCCO is a proposed organization in its establishment phase. Registration details, head office and founding committee names will be published once formally confirmed.",
+    note: "NCCO has not yet launched. It is currently in its pre-launch phase — building governance, partnerships and programme foundations, with services planned to begin from 2027. Registration details, head office and founding committee names will be published once formally confirmed.",
     action: "Connect with NCCO",
     subject: "About NCCO",
   },
@@ -116,7 +116,7 @@ export const pages = {
     title: "Five flagship programmes. One connected mission.",
     eyebrow: "NCCO flagship programmes",
     intro:
-      "NCCO’s 2027–2029 strategy is built around five connected flagship programmes: Prevent, Detect, Support, CancerConnect, and Research & Data.",
+      "NCCO is pre-launch: no programmes are running yet. Its proposed 2027–2029 strategy is built around five connected flagship programmes — Prevent, Detect, Support, CancerConnect, and Research & Data.",
     sections: [
       {
         title: "Program 1 · NCCO Prevent",
@@ -198,7 +198,7 @@ export const pages = {
     title: "Progress through partnership.",
     eyebrow: "Partners & collaboration",
     intro:
-      "NCCO’s partnership strategy spans government, healthcare, community and international organisations — because cancer control requires collaboration.",
+      "NCCO is in its pre-launch phase — the ideal time for government, healthcare, community and international organisations to become founding partners in its collaboration model.",
     sections: [
       {
         title: "Government & public institutions",
@@ -233,7 +233,7 @@ export const pages = {
     title: "Be part of a more caring future.",
     eyebrow: "Get involved",
     intro:
-      "Bring your time, expertise or support to a shared ambition: connecting people with better cancer care.",
+      "NCCO hasn’t launched yet — which means your involvement now can shape what it becomes. Bring your time, expertise or support to a shared ambition: connecting people with better cancer care.",
     sections: [
       {
         title: "Volunteer",
@@ -290,7 +290,7 @@ export const pages = {
     title: "Let’s connect.",
     eyebrow: "Contact NCCO",
     intro:
-      "For general enquiries, programme information, partnerships or research conversations, contact Northern Cancer Care Organization.",
+      "For general enquiries, founding partnerships, programme information or research conversations, contact Northern Cancer Care Organization — currently in its pre-launch phase.",
     sections: [
       { title: "General enquiries", text: "info@northerncancercare.org" },
       {
