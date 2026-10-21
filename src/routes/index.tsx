@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
   head: () =>
     pageHead(
       "Northern Cancer Care Organization",
-      "Connecting people, advancing cancer care and saving lives. NCCO works with government, healthcare providers, researchers and international partners to build connected cancer care in Northern Kenya.",
+      "NCCO is a Kenyan cancer-care non-profit in its pre-launch phase. Connecting people, advancing cancer care and saving lives — launching 2027, and building with government, healthcare providers, researchers and international partners.",
     ),
   component: Home,
 });
@@ -104,7 +104,7 @@ function Home() {
           <div className="entry max-w-[590px]">
             <p className="eyebrow flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-rose" />
-              Northern Cancer Care Organization
+              Northern Cancer Care Organization · Pre-launch
             </p>
             <h1 className="mt-6 text-[34px] font-bold leading-[1.14] md:text-[54px]">
               Connecting People.
@@ -114,8 +114,10 @@ function Home() {
               Saving Lives.
             </h1>
             <p className="mt-6 max-w-xl text-sm leading-7 text-foreground/85 md:text-base md:leading-8">
-              NCCO works with government, healthcare providers, researchers and international
-              partners to build connected, accountable cancer care for Northern Kenya.
+              NCCO is a Kenyan non-profit in its pre-launch phase, working with government,
+              healthcare providers, researchers and international partners to build connected,
+              accountable cancer care for Northern Kenya — ahead of its 2027–2029 programme
+              launch.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild className="h-12 px-6">
@@ -133,9 +135,14 @@ function Home() {
                 </Link>
               </Button>
             </div>
-            <div className="mt-8 flex items-center gap-2 text-xs text-foreground/80">
-              <ShieldCheck size={16} className="text-primary" />
-              Governance-led. Evidence-informed. Built for partnership.
+            <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-foreground/80">
+              <span className="flex items-center gap-2">
+                <ShieldCheck size={16} className="text-primary" />
+                Governance-led. Evidence-informed. Built for partnership.
+              </span>
+              <span className="rounded-full bg-rose-soft px-3 py-1 font-semibold text-rose-ink">
+                Launching 2027
+              </span>
             </div>
           </div>
         </div>
@@ -174,8 +181,10 @@ function Home() {
           </div>
           <div>
             <p className="text-base leading-8 text-muted-foreground">
-              Cancer care is about more than treatment. It is about understanding your options,
-              finding the right support and feeling connected at every step.
+              NCCO is in its pre-launch phase — building the governance, partnerships and
+              programme foundations needed before services begin. Cancer care is about more than
+              treatment. It is about understanding your options, finding the right support and
+              feeling connected at every step.
             </p>
             <p className="mt-4 text-sm leading-7 text-muted-foreground">
               NCCO is a proposed national non-profit organisation whose vision begins with an
@@ -230,9 +239,10 @@ function Home() {
             <p className="eyebrow">For funders & institutional partners</p>
             <h2 className="section-title mt-4 max-w-md">Invest in connected cancer care.</h2>
             <p className="mt-5 text-sm leading-7 text-muted-foreground">
-              NCCO’s 2027–2029 strategy sets out clear funding priorities — with governance,
-              monitoring and evaluation built in from the start. A detailed budget will follow the
-              initial needs assessment and implementation design.
+              NCCO is in its pre-launch phase — the moment when founding partners can help shape
+              priorities. The 2027–2029 strategy sets out clear funding priorities, with
+              governance, monitoring and evaluation built in from the start. A detailed budget will
+              follow the initial needs assessment and implementation design.
             </p>
             <Button asChild className="mt-8 h-12 px-6">
               <Link to="/partners">
@@ -365,7 +375,8 @@ function Home() {
             <h2 className="mt-4 text-3xl font-bold">Build the future of cancer care with us.</h2>
             <p className="mt-4 text-sm text-muted-foreground">
               Government, healthcare providers, research institutions, corporates and international
-              partners — explore what collaboration could look like.
+              partners — join us before launch and help shape how NCCO builds connected cancer
+              care.
             </p>
           </div>
           <Button asChild className="h-12 shrink-0 bg-rose px-7 hover:bg-rose/90">
