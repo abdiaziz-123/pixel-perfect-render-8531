@@ -16,12 +16,13 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { pageHead } from "@/lib/ncco-content";
+import { launchLabel } from "@/lib/launch-schedule";
 import hero from "@/assets/ncco-care.jpg";
 export const Route = createFileRoute("/")({
   head: () =>
     pageHead(
       "Northern Cancer Care Organization",
-      "NCCO is a Kenyan cancer-care non-profit in its pre-launch phase. Connecting people, advancing cancer care and saving lives — launching 2027, and building with government, healthcare providers, researchers and international partners.",
+      `NCCO is a Kenyan cancer-care non-profit preparing to launch in ${launchLabel}. Connecting people, advancing cancer care and saving lives — building with government, healthcare providers, researchers and international partners towards its proposed 2027–2029 strategy.`,
     ),
   component: Home,
 });
@@ -116,8 +117,8 @@ function Home() {
             <p className="mt-6 max-w-xl text-sm leading-7 text-foreground/85 md:text-base md:leading-8">
               NCCO is a Kenyan non-profit in its pre-launch phase, working with government,
               healthcare providers, researchers and international partners to build connected,
-              accountable cancer care for Northern Kenya — ahead of its 2027–2029 programme
-              launch.
+              accountable cancer care for Northern Kenya. Our organization launch is planned for
+              {" "}{launchLabel}, followed by our proposed 2027–2029 programme strategy.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild className="h-12 px-6">
@@ -141,7 +142,7 @@ function Home() {
                 Governance-led. Evidence-informed. Built for partnership.
               </span>
               <span className="rounded-full bg-rose-soft px-3 py-1 font-semibold text-rose-ink">
-                Launching 2027
+                Launching {launchLabel}
               </span>
             </div>
           </div>

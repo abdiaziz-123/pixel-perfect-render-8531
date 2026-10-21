@@ -1,3 +1,5 @@
+import { launchLabel } from "./launch-schedule";
+
 export const navigation = [
   { label: "About NCCO", to: "/about" },
   { label: "Cancer care", to: "/cancer-care" },
@@ -19,7 +21,7 @@ export const pages = {
     title: "People at the heart of cancer care.",
     eyebrow: "About NCCO",
     intro:
-      "Northern Cancer Care Organization (NCCO) is a Kenyan non-profit in its pre-launch phase — an organization in formation, preparing to reduce the burden of cancer through prevention, early detection, patient navigation, support, research, data and strategic partnerships ahead of its 2027–2029 programme launch.",
+      `Northern Cancer Care Organization (NCCO) is a Kenyan non-profit in its pre-launch phase, preparing for its organization launch in ${launchLabel}. Its proposed 2027–2029 strategy focuses on prevention, early detection, patient navigation, support, research, data and strategic partnerships.`,
     sections: [
       {
         title: "Our vision",
@@ -35,7 +37,7 @@ export const pages = {
       },
       {
         title: "Our approach",
-        text: "NCCO works across the full cancer continuum — prevention, early detection, diagnosis, treatment, supportive care, survivorship and palliative care — alongside existing healthcare systems, never replacing hospitals, doctors or licensed providers. Clinical decisions remain with appropriately qualified healthcare professionals.",
+        text: "NCCO’s planned approach spans the full cancer continuum — prevention, early detection, diagnosis, treatment, supportive care, survivorship and palliative care — alongside existing healthcare systems, never replacing hospitals, doctors or licensed providers. Clinical decisions remain with appropriately qualified healthcare professionals.",
       },
       {
         title: "Strategic objectives 2027–2029",
@@ -50,7 +52,7 @@ export const pages = {
         text: "NCCO’s sustainability strategy combines strong governance, diversified funding, partnerships, measurable impact, community ownership and responsible technology. Institutional capacity will be developed so programmes do not depend on one donor or one individual.",
       },
     ],
-    note: "NCCO has not yet launched. It is currently in its pre-launch phase — building governance, partnerships and programme foundations, with services planned to begin from 2027. Registration details, head office and founding committee names will be published once formally confirmed.",
+    note: `NCCO has not yet launched. Its organization launch is planned for ${launchLabel}, with governance, partnerships and programme foundations being developed now. The proposed programme strategy covers 2027–2029; individual service start dates remain unconfirmed. Registration details, head office and founding committee names will be published once formally confirmed.`,
     action: "Connect with NCCO",
     subject: "About NCCO",
   },
@@ -89,11 +91,11 @@ export const pages = {
     title: "A more connected path to care.",
     eyebrow: "Patient navigation",
     intro:
-      "Finding the right cancer service can feel overwhelming. The NCCO navigation framework is designed to connect people with appropriate services and referral support.",
+      "Finding the right cancer service can feel overwhelming. NCCO’s proposed navigation framework is intended to connect people with appropriate services and referral support. Navigation services are not yet operational.",
     sections: [
       {
         title: "01 · Understand your needs",
-        text: "Start with a general enquiry about navigation. Availability and next steps must be confirmed with NCCO. Do not send diagnoses, medical records or other sensitive health information through ordinary email.",
+        text: "You may ask about the planned navigation framework, but NCCO does not currently provide patient navigation or referral assistance. For care now, contact a qualified healthcare provider. Do not send diagnoses, medical records or other sensitive health information through this website or ordinary email.",
       },
       {
         title: "02 · Identify appropriate services",
@@ -116,7 +118,7 @@ export const pages = {
     title: "Five flagship programmes. One connected mission.",
     eyebrow: "NCCO flagship programmes",
     intro:
-      "NCCO is pre-launch: no programmes are running yet. Its proposed 2027–2029 strategy is built around five connected flagship programmes — Prevent, Detect, Support, CancerConnect, and Research & Data.",
+      `NCCO is preparing for its organization launch in ${launchLabel}; no programmes are running yet. Its proposed 2027–2029 strategy is built around five connected flagship programmes — Prevent, Detect, Support, CancerConnect, and Research & Data.`,
     sections: [
       {
         title: "Program 1 · NCCO Prevent",
@@ -124,7 +126,7 @@ export const pages = {
       },
       {
         title: "Program 2 · NCCO Detect",
-        text: "Early detection and screening navigation. Working with qualified healthcare providers and facilities to promote appropriate screening: public education on early warning signs, screening-awareness campaigns, referral navigation, community outreach and follow-up after screening where appropriate.",
+        text: "Planned early detection and screening navigation would involve qualified healthcare providers and facilities to promote appropriate screening: public education on early warning signs, screening-awareness campaigns, referral navigation, community outreach and follow-up after screening where appropriate.",
       },
       {
         title: "Program 3 · NCCO Support",
@@ -167,7 +169,7 @@ export const pages = {
     title: "Better evidence. Better cancer care.",
     eyebrow: "Research & data",
     intro:
-      "NCCO’s research and data programme aims to turn responsible evidence into a better understanding of cancer-care access and service gaps.",
+      "NCCO’s proposed research and data programme aims to turn responsible evidence into a better understanding of cancer-care access and service gaps.",
     sections: [
       {
         title: "Research collaboration",
@@ -198,7 +200,7 @@ export const pages = {
     title: "Progress through partnership.",
     eyebrow: "Partners & collaboration",
     intro:
-      "NCCO is in its pre-launch phase — the ideal time for government, healthcare, community and international organisations to become founding partners in its collaboration model.",
+      `NCCO is preparing to launch in ${launchLabel} — an opportunity for government, healthcare, community and international organisations to help shape its foundations and proposed 2027–2029 strategy.`,
     sections: [
       {
         title: "Government & public institutions",
@@ -233,7 +235,7 @@ export const pages = {
     title: "Be part of a more caring future.",
     eyebrow: "Get involved",
     intro:
-      "NCCO hasn’t launched yet — which means your involvement now can shape what it becomes. Bring your time, expertise or support to a shared ambition: connecting people with better cancer care.",
+      `NCCO is preparing to launch in ${launchLabel} — your involvement now can help shape its foundations. Bring your time, expertise or support to a shared ambition: connecting people with better cancer care.`,
     sections: [
       {
         title: "Volunteer",
@@ -290,12 +292,12 @@ export const pages = {
     title: "Let’s connect.",
     eyebrow: "Contact NCCO",
     intro:
-      "For general enquiries, founding partnerships, programme information or research conversations, contact Northern Cancer Care Organization — currently in its pre-launch phase.",
+      `For general enquiries, founding partnerships, planned programme information or research conversations, contact Northern Cancer Care Organization — preparing to launch in ${launchLabel}.`,
     sections: [
       { title: "General enquiries", text: "info@northerncancercare.org" },
       {
         title: "Your privacy matters",
-        text: "Keep your first enquiry general. Do not include medical records, diagnoses, identification documents or other sensitive personal information in ordinary email.",
+        text: "Keep your first enquiry general. Do not include medical records, diagnoses, identification documents or other sensitive personal information in this form or ordinary email. Form enquiries are stored so authorised NCCO staff can review and respond.",
       },
     ],
     note: "NCCO’s telephone number, WhatsApp account and office address have not been supplied. The listed email comes from the organisation’s digital-infrastructure document; mailbox availability still needs confirmation.",
@@ -306,8 +308,12 @@ export const pages = {
     title: "Respect for every person’s privacy.",
     eyebrow: "Privacy & patient information",
     intro:
-      "This public website provides information and links to email. It does not operate a patient portal or collect medical records.",
+      "This public website provides information, enquiry forms and email links. Form enquiries are stored for authorised NCCO staff to review and respond. It does not operate a patient portal or request medical records.",
     sections: [
+      {
+        title: "Website enquiry forms",
+        text: "When you submit a form, the website stores your name, email address, optional organisation, selected topic and message. Authorised NCCO staff can review these details to handle your enquiry and reply. Do not submit diagnoses, medical records, ID numbers or other sensitive health information. To request access, correction or deletion of your enquiry, contact info@northerncancercare.org without including sensitive health details.",
+      },
       {
         title: "Contacting NCCO",
         text: "Email links open your email application. Any information you choose to send is handled by your email provider and the recipient. Avoid sending sensitive health or identity information through ordinary email.",

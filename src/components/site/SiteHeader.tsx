@@ -4,13 +4,14 @@ import { ArrowUpRight, Mail, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/ncco-logo.svg.asset.json";
 import { navigation } from "@/lib/ncco-content";
+import { launchLabel } from "@/lib/launch-schedule";
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   return (
     <header className="relative z-30 bg-background">
       <div className="bg-primary text-on-primary">
         <div className="site-container flex min-h-9 items-center justify-between gap-4 py-2 text-[11px]">
-          <span>Pre-launch · Connecting People. Advancing Cancer Care. Saving Lives.</span>
+          <span>Pre-launch · Launching {launchLabel}</span>
           <a
             className="hidden items-center gap-2 sm:flex"
             href="mailto:info@northerncancercare.org"
